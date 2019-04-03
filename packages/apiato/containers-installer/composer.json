@@ -1,0 +1,15 @@
+{
+  "name": "apiato/containers-installer",
+  "type": "composer-plugin",
+  "autoload": {
+    "psr-4": {
+      "apiato\\installer\\": "src/"
+    }
+  },
+  "extra": {
+    "class": "apiato\\installer\\ContainerInstallerPlugin"
+  },
+  "require": {
+    "composer-plugin-api": "^1.0"
+  }
+}

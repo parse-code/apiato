@@ -3,9 +3,6 @@
 namespace App\Containers\User\Models;
 
 use App\Containers\Authorization\Traits\AuthorizationTrait;
-use App\Containers\Payment\Contracts\ChargeableInterface;
-use App\Containers\Payment\Models\PaymentAccount;
-use App\Containers\Payment\Traits\ChargeableTrait;
 use App\Ship\Parents\Models\UserModel;
 
 /**
@@ -13,10 +10,9 @@ use App\Ship\Parents\Models\UserModel;
  *
  * @author Mahmoud Zalt <mahmoud@zalt.me>
  */
-class User extends UserModel implements ChargeableInterface
+class User extends UserModel
 {
 
-    use ChargeableTrait;
     use AuthorizationTrait;
 
     /**
@@ -77,10 +73,5 @@ class User extends UserModel implements ChargeableInterface
         'password',
         'remember_token',
     ];
-
-    public function paymentAccounts()
-    {
-        return $this->hasMany(PaymentAccount::class);
-    }
 
 }

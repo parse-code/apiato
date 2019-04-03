@@ -64,11 +64,8 @@ return [
 
     'model_locations' => [
         'app/Containers/Authorization',
-        'app/Containers/Payment',
         'app/Containers/Settings',
-        'app/Containers/Stripe',
         'app/Containers/User',
-        'app/Containers/Wepay',
     ],
 
 

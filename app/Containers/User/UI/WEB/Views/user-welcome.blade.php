@@ -38,7 +38,11 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Welcome Anonymous User :)</div>
+                @if(auth()->check())
+                <div class="title">Welcome {{auth()->user()->name}}</div>
+                @else
+                    <div class="title">Welcome Guest :)</div>
+                @endif
             </div>
         </div>
     </body>
