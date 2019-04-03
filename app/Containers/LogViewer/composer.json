@@ -1,0 +1,7 @@
+{
+  "name": "apiato/logviewer",
+  "description": "LogViewer Container for apiato.",
+  "require": {
+    "arcanedev/log-viewer": "4.*"
+  }
+}
