@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "type": "Meeting",
+      "title": "New Project Kick-off meeting",
+      "description": "Augue onec eleifend nisl eu",
+      "className": "block b-t b-t-2x b-primary",
+      "participant": "1,2,4,7,9"
+    },
+    {
+      "id": 2,
+      "type": "Appointment",
+      "title": "Meet Mike at company office",
+      "description": "Phasellus at ultricies neque augue",
+      "className": "block b-t b-t-2x b-info",
+      "participant": "4,5,7,8"
+    },
+    {
+      "id": 3,
+      "type": "Meeting",
+      "title": "Travel IOS application mockup design",
+      "description": "Quis malesuada augue",
+      "className": "block b-t b-t-2x b-success",
+      "participant": "6,7"
+    },
+    {
+      "id": 4,
+      "type": "Appointment",
+      "title": "Weekly report meeting",
+      "description": "Donec eleifend nisl eu consectetur.",
+      "className": "block b-t b-t-2x b-danger",
+      "participant": "3,6"
+    },
+    {
+      "id": 5,
+      "type": "Meeting",
+      "title": "All day Meeting",
+      "description": "Malesuada augue onec eleifend nisl eu.",
+      "className": "block b-t b-t-2x b-warning",
+      "participant": "2,6,8,9"
+    },
+    {
+      "id": 6,
+      "type": "Meeting",
+      "title": "Repeating Meeting",
+      "description": "Donec eleifend nisl eu consectetur.",
+      "className": "block b-t b-t-2x b-primary",
+      "participant": "6,9"
+    }
+ ]
