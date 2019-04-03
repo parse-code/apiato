@@ -3,6 +3,7 @@
 namespace App\Containers\Welcome\UI\CLI\Commands;
 
 use App\Ship\Parents\Commands\ConsoleCommand;
+use Apiato\Core\Foundation\Facades\Apiato;
 
 /**
  * Class SayWelcomeCommand
@@ -43,6 +44,6 @@ class SayWelcomeCommand extends ConsoleCommand
      */
     public function handle()
     {
-        echo "Welcome to apiato :)\n";
+        $this->line(Apiato::call('Welcome@FindMessageForApiV1VisitorAction'));
     }
 }

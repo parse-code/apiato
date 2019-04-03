@@ -16,16 +16,6 @@ class Controller extends ApiController
     /**
      * @return  \Illuminate\Http\JsonResponse
      */
-    public function apiRoot()
-    {
-        $message = Apiato::call('Welcome@FindMessageForApiRootVisitorAction');
-
-        return response()->json($message);
-    }
-
-    /**
-     * @return  \Illuminate\Http\JsonResponse
-     */
     public function v1ApiLandingPage()
     {
         $message = Apiato::call('Welcome@FindMessageForApiV1VisitorAction');
