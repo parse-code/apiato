@@ -3,16 +3,16 @@
 /**
  * @apiGroup           Welcome
  * @apiName            ApiLandingPage
- * @api                {get} /v1/ Welcome
+ * @api                {get} /v2/ Welcome
  * @apiDescription     Show a message
  *
- * @apiVersion         1.0.0
+ * @apiVersion         2.0.0
  * @apiPermission      none
  *
  * @apiSuccessExample  {json} Success-Response:
  * HTTP/1.1 200 OK
  * [
- * "Welcome to Apiato (API V1)"
+ * "Welcome to My Apiato (API V2)"
  * ]
  * @apiErrorExample  {json} Error-Response:
  * HTTP/1.1 404 Not Found
