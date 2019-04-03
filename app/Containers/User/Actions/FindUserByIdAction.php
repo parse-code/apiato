@@ -31,5 +31,4 @@ class FindUserByIdAction extends Action
 
         return $user;
     }
-
 }

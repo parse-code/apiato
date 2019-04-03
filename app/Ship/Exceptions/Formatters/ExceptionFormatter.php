@@ -20,7 +20,7 @@ class ExceptionFormatter extends CoreExceptionsFormatter
      *
      * @var  integer
      */
-    CONST STATUS_CODE = 500;
+    const STATUS_CODE = 500;
 
     /**
      * @param \Exception                    $exception
@@ -44,7 +44,7 @@ class ExceptionFormatter extends CoreExceptionsFormatter
      *
      * @return  mixed
      */
-    function modifyResponse(Exception $exception, JsonResponse $response)
+    public function modifyResponse(Exception $exception, JsonResponse $response)
     {
         return $response;
     }

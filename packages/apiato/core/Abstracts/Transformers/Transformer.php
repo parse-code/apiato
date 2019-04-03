@@ -92,15 +92,12 @@ abstract class Transformer extends FractalTransformer
     {
         try {
             return parent::callIncludeMethod($scope, $includeName, $data);
-        }
-        catch (ErrorException $exception) {
+        } catch (ErrorException $exception) {
             if (Config::get('apiato.requests.force-valid-includes', true)) {
                 throw new UnsupportedFractalIncludeException();
             }
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new CoreInternalErrorException();
         }
     }
-
 }

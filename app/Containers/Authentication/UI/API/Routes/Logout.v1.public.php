@@ -21,4 +21,3 @@ $router->delete('logout', [
         'auth:api',
     ],
 ]);
-

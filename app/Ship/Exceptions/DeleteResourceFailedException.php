@@ -12,9 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class DeleteResourceFailedException extends Exception
 {
-
     public $httpStatusCode = Response::HTTP_EXPECTATION_FAILED;
 
     public $message = 'Failed to delete Resource.';
-
 }

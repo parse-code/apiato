@@ -15,7 +15,6 @@ use App\Containers\Authorization\Tests\ApiTestCase;
  */
 class DeleteRoleTest extends ApiTestCase
 {
-
     protected $endpoint = 'delete@v1/roles/{id}';
 
     protected $access = [
@@ -36,5 +35,4 @@ class DeleteRoleTest extends ApiTestCase
         // assert response status is correct
         $response->assertStatus(204);
     }
-
 }

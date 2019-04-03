@@ -15,7 +15,6 @@ use Exception;
  */
 class FindUserByEmailTask extends Task
 {
-
     protected $repository;
 
     public function __construct(UserRepository $repository)

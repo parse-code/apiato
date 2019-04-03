@@ -172,5 +172,4 @@ class Controller extends ApiController
 
         return $this->transform($role, RoleTransformer::class);
     }
-
 }

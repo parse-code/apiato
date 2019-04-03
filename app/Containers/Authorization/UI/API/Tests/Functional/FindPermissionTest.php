@@ -15,7 +15,6 @@ use App\Containers\Authorization\Tests\ApiTestCase;
  */
 class FindPermissionTest extends ApiTestCase
 {
-
     protected $endpoint = 'get@v1/permissions/{id}';
 
     protected $access = [
@@ -40,5 +39,4 @@ class FindPermissionTest extends ApiTestCase
 
         $this->assertEquals($permissionA->name, $responseContent->data->name);
     }
-
 }

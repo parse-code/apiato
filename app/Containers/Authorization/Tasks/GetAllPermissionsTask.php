@@ -37,5 +37,4 @@ class GetAllPermissionsTask extends Task
     {
         return $skipPagination ? $this->repository->all() : $this->repository->paginate();
     }
-
 }

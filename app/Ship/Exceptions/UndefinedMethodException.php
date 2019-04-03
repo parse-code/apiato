@@ -12,9 +12,7 @@ use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
  */
 class UndefinedMethodException extends Exception
 {
-
     public $httpStatusCode = SymfonyResponse::HTTP_FORBIDDEN;
 
     public $message = 'Undefined HTTP Verb!';
-
 }

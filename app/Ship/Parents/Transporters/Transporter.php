@@ -11,5 +11,4 @@ use Apiato\Core\Abstracts\Transporters\Transporter as AbstractTransporter;
  */
 abstract class Transporter extends AbstractTransporter
 {
-
 }

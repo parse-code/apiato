@@ -38,10 +38,7 @@ trait LocalizationLoaderTrait
     private function loadLocals($directory, $containerName)
     {
         if (File::isDirectory($directory)) {
-
             $this->loadTranslationsFrom($directory, strtolower($containerName));
-
         }
     }
-
 }

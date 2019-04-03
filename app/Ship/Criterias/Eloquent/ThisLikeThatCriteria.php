@@ -58,9 +58,9 @@ class ThisLikeThatCriteria extends Criteria
         return $model->where(function ($query) {
             $values = explode($this->separator, $this->valueString);
             $query->where($this->field, 'LIKE', str_replace($this->wildcard, '%', array_shift($values)));
-            foreach ($values as $value)
+            foreach ($values as $value) {
                 $query->orWhere($this->field, 'LIKE', str_replace($this->wildcard, '%', $value));
+            }
         });
     }
-
 }

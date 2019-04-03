@@ -32,5 +32,4 @@ class FindPermissionAction extends Action
 
         return $permission;
     }
-
 }

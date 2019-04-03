@@ -22,5 +22,4 @@ class EncryptCookies extends Middleware
     protected $except = [
         //
     ];
-
 }

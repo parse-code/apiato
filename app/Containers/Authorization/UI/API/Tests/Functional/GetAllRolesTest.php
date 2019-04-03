@@ -14,7 +14,6 @@ use App\Containers\Authorization\Tests\ApiTestCase;
  */
 class GetAllRolesTest extends ApiTestCase
 {
-
     protected $endpoint = 'get@v1/roles';
 
     protected $access = [
@@ -40,5 +39,4 @@ class GetAllRolesTest extends ApiTestCase
 
         $this->assertTrue(count($responseContent->data) > 0);
     }
-
 }

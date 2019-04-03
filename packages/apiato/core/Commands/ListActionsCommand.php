@@ -47,13 +47,11 @@ class ListActionsCommand extends ConsoleCommand
     public function handle()
     {
         foreach (Apiato::getContainersNames() as $containerName) {
-
             $this->console->writeln("<fg=yellow> [$containerName]</fg=yellow>");
 
             $directory = base_path('app/Containers/' . $containerName . '/Actions');
 
             if (File::isDirectory($directory)) {
-
                 $files = File::allFiles($directory);
 
                 foreach ($files as $action) {
@@ -81,5 +79,4 @@ class ListActionsCommand extends ConsoleCommand
             }
         }
     }
-
 }

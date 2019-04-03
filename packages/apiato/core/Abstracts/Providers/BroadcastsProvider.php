@@ -11,5 +11,4 @@ use Illuminate\Support\ServiceProvider as LaravelBroadcastServiceProvider;
  */
 class BroadcastsProvider extends LaravelBroadcastServiceProvider
 {
-
 }

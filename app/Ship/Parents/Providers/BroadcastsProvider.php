@@ -27,5 +27,4 @@ class BroadcastsProvider extends AbstractBroadcastsProvider
 
         require app_path('Ship/Broadcasts/Routes.php');
     }
-
 }

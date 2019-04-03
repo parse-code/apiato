@@ -15,7 +15,6 @@ use App\Containers\User\Tests\ApiTestCase;
  */
 class GetAllClientsTest extends ApiTestCase
 {
-
     protected $endpoint = 'get@v1/clients';
 
     protected $access = [
@@ -66,5 +65,4 @@ class GetAllClientsTest extends ApiTestCase
             'message' => 'This action is unauthorized.',
         ]);
     }
-
 }

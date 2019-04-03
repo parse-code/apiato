@@ -41,7 +41,7 @@ class ProcessETagHeadersMiddleware extends Middleware
         // check, if an "if-none-match" header is supplied
         if ($request->hasHeader('if-none-match')) {
             // check, if the request method is GET or HEAD
-            if ( ! ($request->method() == 'GET' || $request->method() == 'HEAD')) {
+            if (! ($request->method() == 'GET' || $request->method() == 'HEAD')) {
                 throw new PreconditionFailedHttpException('HTTP Header IF-None-Match is only allowed for GET and HEAD Requests.');
             }
         }
@@ -65,5 +65,4 @@ class ProcessETagHeadersMiddleware extends Middleware
 
         return $response;
     }
-
 }

@@ -20,7 +20,7 @@ class AuthenticationExceptionFormatter extends CoreExceptionsFormatter
      *
      * @var  integer
      */
-    CONST STATUS_CODE = 401;
+    const STATUS_CODE = 401;
 
     /**
      * @param \Exception                    $exception
@@ -44,7 +44,7 @@ class AuthenticationExceptionFormatter extends CoreExceptionsFormatter
      *
      * @return  mixed
      */
-    function modifyResponse(Exception $exception, JsonResponse $response)
+    public function modifyResponse(Exception $exception, JsonResponse $response)
     {
         return $response;
     }
@@ -56,5 +56,4 @@ class AuthenticationExceptionFormatter extends CoreExceptionsFormatter
     {
         return self::STATUS_CODE;
     }
-
 }

@@ -27,6 +27,5 @@ class UserPermissionsSeeder_1 extends Seeder
         Apiato::call('Authorization@CreatePermissionTask', ['refresh-users', 'Refresh User data.']);
 
         // ...
-
     }
 }

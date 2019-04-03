@@ -41,5 +41,4 @@ trait TestsUploadHelperTrait
     {
         return $this->getTestingFile($imageName, $stubDirPath, $mimeType, $size);
     }
-
 }

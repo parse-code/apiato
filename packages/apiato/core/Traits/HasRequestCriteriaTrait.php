@@ -70,5 +70,4 @@ trait HasRequestCriteriaTrait
 
         return $validatedRepository;
     }
-
 }

@@ -75,7 +75,7 @@ trait TestsRequestHelperTrait
      * @param array $headers
      *
      * @throws \App\Ship\Exceptions\UndefinedMethodException
-     * 
+     *
      * @return \Illuminate\Foundation\Testing\TestResponse
      */
     public function makeCall(array $data = [], array $headers = [])
@@ -143,8 +143,10 @@ trait TestsRequestHelperTrait
      */
     public function getResponseContentArray()
     {
-        return $this->responseContentArray ? : $this->responseContentArray = json_decode($this->getResponseContent(),
-            true);
+        return $this->responseContentArray ? : $this->responseContentArray = json_decode(
+            $this->getResponseContent(),
+            true
+        );
     }
 
     /**
@@ -152,8 +154,10 @@ trait TestsRequestHelperTrait
      */
     public function getResponseContentObject()
     {
-        return $this->responseContentObject ? : $this->responseContentObject = json_decode($this->getResponseContent(),
-            false);
+        return $this->responseContentObject ? : $this->responseContentObject = json_decode(
+            $this->getResponseContent(),
+            false
+        );
     }
 
     /**
@@ -371,5 +375,4 @@ trait TestsRequestHelperTrait
             return [$this->formatServerHeaderKey($name) => $value];
         })->all();
     }
-
 }

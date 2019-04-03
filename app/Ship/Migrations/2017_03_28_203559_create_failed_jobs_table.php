@@ -38,5 +38,4 @@ class CreateFailedJobsTable extends Migration
     {
         Schema::drop('failed_jobs');
     }
-
 }

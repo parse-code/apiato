@@ -38,5 +38,4 @@ class NotNullCriteria extends Criteria
     {
         return $model->whereNotNull($this->field);
     }
-
 }

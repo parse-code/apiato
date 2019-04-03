@@ -13,7 +13,6 @@ use App\Ship\Parents\Tasks\Task;
  */
 class UpdateUserSocialProfileTask extends Task
 {
-
     protected $repository;
 
     public function __construct(UserRepository $repository)
@@ -108,6 +107,4 @@ class UpdateUserSocialProfileTask extends Task
 
         return $user;
     }
-
-
 }

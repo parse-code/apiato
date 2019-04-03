@@ -84,5 +84,4 @@ class RepositoryGenerator extends GeneratorCommand implements ComponentsGenerato
             ],
         ];
     }
-
 }

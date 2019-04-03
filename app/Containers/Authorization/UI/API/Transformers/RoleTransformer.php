@@ -12,7 +12,6 @@ use App\Ship\Parents\Transformers\Transformer;
  */
 class RoleTransformer extends Transformer
 {
-
     protected $availableIncludes = [
 
     ];
@@ -47,5 +46,4 @@ class RoleTransformer extends Transformer
     {
         return $this->collection($role->permissions, new PermissionTransformer());
     }
-
 }

@@ -15,7 +15,6 @@ use Exception;
  */
 class FindUserByIdTask extends Task
 {
-
     protected $repository;
 
     public function __construct(UserRepository $repository)
@@ -40,5 +39,4 @@ class FindUserByIdTask extends Task
 
         return $user;
     }
-
 }

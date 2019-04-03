@@ -45,5 +45,4 @@ class ThisEqualThatCriteria extends Criteria
     {
         return $model->where($this->field, $this->value);
     }
-
 }

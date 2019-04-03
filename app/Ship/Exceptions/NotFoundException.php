@@ -12,9 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class NotFoundException extends Exception
 {
-
     public $httpStatusCode = Response::HTTP_NOT_FOUND;
 
     public $message = 'The requested Resource was not found.';
-
 }

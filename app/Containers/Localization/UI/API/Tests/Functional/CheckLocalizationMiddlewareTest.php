@@ -77,5 +77,4 @@ class CheckLocalizationMiddlewareTest extends ApiTestCase
         // assert the response status
         $response->assertStatus(412);
     }
-
 }

@@ -12,7 +12,6 @@ use App\Ship\Parents\Models\UserModel;
  */
 class User extends UserModel
 {
-
     use AuthorizationTrait;
 
     /**
@@ -73,5 +72,4 @@ class User extends UserModel
         'password',
         'remember_token',
     ];
-
 }

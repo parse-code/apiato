@@ -20,7 +20,7 @@ class CreateJobsTable extends Migration
      */
     public function up()
     {
-        if(Config::get('queue.default') == 'database'){
+        if (Config::get('queue.default') == 'database') {
             Schema::create('jobs', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('queue');
@@ -44,5 +44,4 @@ class CreateJobsTable extends Migration
     {
         Schema::dropIfExists('jobs');
     }
-
 }

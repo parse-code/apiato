@@ -15,7 +15,6 @@ use App\Containers\User\Tests\ApiTestCase;
  */
 class GetAllAdminsTest extends ApiTestCase
 {
-
     protected $endpoint = 'get@v1/admins';
 
     protected $access = [
@@ -44,8 +43,10 @@ class GetAllAdminsTest extends ApiTestCase
         $responseContent = $this->getResponseContentObject();
 
         // assert the returned data size is correct
-        $this->assertCount(4,
-            $responseContent->data); // 2 (fake in this test) + 1 (that is logged in) + 1 (seeded super admin)
+        $this->assertCount(
+            4,
+            $responseContent->data
+        ); // 2 (fake in this test) + 1 (that is logged in) + 1 (seeded super admin)
     }
 
     /**
@@ -69,5 +70,4 @@ class GetAllAdminsTest extends ApiTestCase
             'message' => 'This action is unauthorized.',
         ]);
     }
-
 }

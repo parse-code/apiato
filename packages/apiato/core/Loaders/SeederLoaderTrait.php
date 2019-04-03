@@ -43,9 +43,7 @@ trait SeederLoaderTrait
         $containersDirectories = [];
 
         foreach (Apiato::getContainersNames() as $containerName) {
-
             $containersDirectories[] = base_path('app/Containers/' . $containerName . $this->seedersPath);
-
         }
 
         $seedersClasses = $this->findSeedersClasses($containersDirectories, $seedersClasses);
@@ -83,19 +81,17 @@ trait SeederLoaderTrait
     private function findSeedersClasses(array $directories, $seedersClasses)
     {
         foreach ($directories as $directory) {
-
             if (File::isDirectory($directory)) {
-
                 $files = File::allFiles($directory);
 
                 foreach ($files as $seederClass) {
-
                     if (File::isFile($seederClass)) {
 
                         // do not seed the classes now, just store them in a collection and w
                         $seedersClasses->push(
                             Apiato::getClassFullNameFromFile(
-                                $seederClass->getPathname())
+                                $seederClass->getPathname()
+                            )
                         );
                     }
                 }
@@ -154,5 +150,4 @@ trait SeederLoaderTrait
             $this->call($seeder);
         }
     }
-
 }

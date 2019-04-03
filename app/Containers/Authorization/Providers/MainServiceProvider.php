@@ -33,5 +33,4 @@ class MainServiceProvider extends MainProvider
     public $aliases = [
 
     ];
-
 }

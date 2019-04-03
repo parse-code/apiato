@@ -17,7 +17,6 @@ use Spatie\Permission\Traits\HasRoles;
  */
 abstract class UserModel extends AbstractUserModel
 {
-
     use Notifiable;
     use SoftDeletes;
     use HashIdTrait;
@@ -32,8 +31,7 @@ abstract class UserModel extends AbstractUserModel
 
         $builder = $this;
 
-        foreach ($fields as $field)
-        {
+        foreach ($fields as $field) {
             $builder = $builder->orWhere($field, $identifier);
         }
 
@@ -41,5 +39,4 @@ abstract class UserModel extends AbstractUserModel
 
         return $builder;
     }
-
 }

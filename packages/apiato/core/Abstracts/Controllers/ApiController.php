@@ -11,7 +11,6 @@ use Apiato\Core\Traits\ResponseTrait;
  */
 abstract class ApiController extends Controller
 {
-
     use ResponseTrait;
 
     /**
@@ -21,5 +20,4 @@ abstract class ApiController extends Controller
      * @var  string
      */
     public $ui = 'api';
-
 }

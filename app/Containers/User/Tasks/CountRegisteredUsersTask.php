@@ -13,7 +13,6 @@ use App\Ship\Parents\Tasks\Task;
  */
 class CountRegisteredUsersTask extends Task
 {
-
     protected $repository;
 
     public function __construct(UserRepository $repository)
@@ -29,5 +28,4 @@ class CountRegisteredUsersTask extends Task
         $this->repository->pushCriteria(new NotNullCriteria('email'));
         return $this->repository->all()->count();
     }
-
 }

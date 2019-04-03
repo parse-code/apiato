@@ -45,5 +45,4 @@ class SeedDeploymentDataCommand extends ConsoleCommand
 
         $this->info('Deployment Data Seeded Successfully.');
     }
-
 }

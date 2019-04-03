@@ -30,5 +30,4 @@ trait FactoriesLoaderTrait
             return Factory::construct($faker, base_path() . $newFactoriesPath);
         });
     }
-
 }

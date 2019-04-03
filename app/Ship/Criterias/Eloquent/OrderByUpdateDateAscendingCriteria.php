@@ -23,5 +23,4 @@ class OrderByUpdateDateAscendingCriteria extends Criteria
     {
         return $model->orderBy('updated_at', 'asc');
     }
-
 }

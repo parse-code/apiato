@@ -33,7 +33,6 @@ use Vinkla\Hashids\HashidsServiceProvider;
  */
 class ApiatoProvider extends AbstractMainProvider
 {
-
     use FactoriesLoaderTrait;
     use AutoLoaderTrait;
     use ValidationTrait;
@@ -117,5 +116,4 @@ class ApiatoProvider extends AbstractMainProvider
     {
         App::register(EventServiceProvider::class); //The custom apiato eventserviceprovider
     }
-
 }

@@ -13,7 +13,6 @@ use App\Ship\Parents\Commands\ConsoleCommand;
  */
 class GiveAllPermissionsToRoleCommand extends ConsoleCommand
 {
-
     protected $signature = 'apiato:permissions:toRole {role}';
 
     protected $description = 'Give all system Permissions to a specific Role.';
@@ -35,7 +34,9 @@ class GiveAllPermissionsToRoleCommand extends ConsoleCommand
 
         $role->syncPermissions($allPermissionsNames = $allPermissions->pluck('name')->toArray());
 
-        $this->info('Gave the Role (' . $roleName . ') the following Permissions: ' . implode(' - ',
-                $allPermissionsNames) . '.');
+        $this->info('Gave the Role (' . $roleName . ') the following Permissions: ' . implode(
+            ' - ',
+                $allPermissionsNames
+        ) . '.');
     }
 }

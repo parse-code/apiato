@@ -10,7 +10,6 @@ use Exception;
 
 class CreateSettingTask extends Task
 {
-
     protected $repository;
 
     public function __construct(SettingRepository $repository)
@@ -28,8 +27,7 @@ class CreateSettingTask extends Task
     {
         try {
             return $this->repository->create($data);
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new CreateResourceFailedException();
         }
     }

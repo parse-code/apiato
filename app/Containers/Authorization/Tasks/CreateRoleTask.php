@@ -58,5 +58,4 @@ class CreateRoleTask extends Task
 
         return $role;
     }
-
 }

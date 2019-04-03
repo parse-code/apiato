@@ -27,5 +27,4 @@ class PermissionRepository extends Repository
         'display_name' => 'like',
         'description'  => 'like',
     ];
-
 }

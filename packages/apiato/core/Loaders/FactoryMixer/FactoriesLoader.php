@@ -17,23 +17,17 @@ $containersFactoriesPath = '/Data/Factories/';
 
 // Checkout the FactoriesLoaderTrait.php trait, to get an idea on how this works.
 foreach (Apiato::getContainersNames() as $containerName) {
-
     $containersDirectory = base_path('app/Containers/' . $containerName . $containersFactoriesPath);
 
     if (\File::isDirectory($containersDirectory)) {
-
         $files = \File::allFiles($containersDirectory);
 
         foreach ($files as $factoryFile) {
-
             if (\File::isFile($factoryFile)) {
 
                 // Include the factory files
                 include($factoryFile);
-
             }
         }
     }
-
 }
-

@@ -16,7 +16,6 @@ use App\Containers\Authorization\Tests\ApiTestCase;
  */
 class DetachPermissionsFromRoleTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/permissions/detach';
 
     protected $access = [
@@ -86,6 +85,4 @@ class DetachPermissionsFromRoleTest extends ApiTestCase
             'role_id'       => $roleA->id
         ]);
     }
-
-
 }

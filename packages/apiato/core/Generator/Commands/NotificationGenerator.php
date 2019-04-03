@@ -84,5 +84,4 @@ class NotificationGenerator extends GeneratorCommand implements ComponentsGenera
             ],
         ];
     }
-
-  }
+}

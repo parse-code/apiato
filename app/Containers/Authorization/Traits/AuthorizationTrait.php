@@ -36,5 +36,4 @@ trait AuthorizationTrait
     {
         return ($role = $this->roles()->orderBy('level', 'DESC')->first()) ? $role->level : 0;
     }
-
 }

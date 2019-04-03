@@ -45,5 +45,4 @@ class GenerateApiDocsCommand extends ConsoleCommand
 
         Apiato::call('Documentation@GenerateDocumentationAction', [$transporter]);
     }
-
 }

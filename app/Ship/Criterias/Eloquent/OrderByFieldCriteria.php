@@ -14,7 +14,6 @@ use Prettus\Repository\Contracts\RepositoryInterface as PrettusRepositoryInterfa
  */
 class OrderByFieldCriteria extends Criteria
 {
-
     private $field;
     private $sortOrder;
 
@@ -52,5 +51,4 @@ class OrderByFieldCriteria extends Criteria
     {
         return $model->orderBy($this->field, $this->sortOrder);
     }
-
 }

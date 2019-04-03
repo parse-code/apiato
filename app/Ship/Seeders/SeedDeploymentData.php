@@ -21,5 +21,4 @@ class SeedDeploymentData extends Seeder
     {
         // Create data for live deployment here
     }
-
 }

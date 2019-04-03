@@ -10,7 +10,6 @@ use Exception;
 
 class DeleteSettingTask extends Task
 {
-
     protected $repository;
 
     public function __construct(SettingRepository $repository)
@@ -28,8 +27,7 @@ class DeleteSettingTask extends Task
     {
         try {
             return $this->repository->delete($setting->id);
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new DeleteResourceFailedException();
         }
     }

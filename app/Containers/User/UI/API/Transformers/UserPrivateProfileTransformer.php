@@ -70,5 +70,4 @@ class UserPrivateProfileTransformer extends Transformer
     {
         return $this->collection($user->roles, new RoleTransformer());
     }
-
 }

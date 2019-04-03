@@ -11,5 +11,4 @@ use Apiato\Core\Abstracts\Seeders\Seeder as AbstractSeeder;
  */
 abstract class Seeder extends AbstractSeeder
 {
-
 }

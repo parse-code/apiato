@@ -20,7 +20,7 @@ class UnprocessableEntityHttpExceptionFormatter extends CoreExceptionsFormatter
      *
      * @var  int
      */
-    CONST STATUS_CODE = 422;
+    const STATUS_CODE = 422;
 
     /**
      * @param \Exception                    $exception
@@ -65,7 +65,7 @@ class UnprocessableEntityHttpExceptionFormatter extends CoreExceptionsFormatter
      *
      * @return  mixed
      */
-    function modifyResponse(Exception $exception, JsonResponse $response)
+    public function modifyResponse(Exception $exception, JsonResponse $response)
     {
         return $response;
     }
@@ -77,6 +77,4 @@ class UnprocessableEntityHttpExceptionFormatter extends CoreExceptionsFormatter
     {
         return self::STATUS_CODE;
     }
-
-
 }

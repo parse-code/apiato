@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\DB;
  */
 class ProxyLoginTest extends ApiTestCase
 {
-
     protected $endpoint; // testing multiple endpoints form the tests
 
     protected $access = [
@@ -123,7 +122,8 @@ class ProxyLoginTest extends ApiTestCase
         Config::set('authentication-container.clients.web.admin.secret', $clientSecret);
 
         // specifically allow to login with "name" attribute
-        Config::set('authentication-container.login.allowed_login_attributes',
+        Config::set(
+            'authentication-container.login.allowed_login_attributes',
             [
                 'email' => ['email'],
                 'name' => [],

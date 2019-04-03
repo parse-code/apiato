@@ -19,5 +19,4 @@ abstract class Repository extends AbstractRepository
     {
         parent::boot();
     }
-
 }

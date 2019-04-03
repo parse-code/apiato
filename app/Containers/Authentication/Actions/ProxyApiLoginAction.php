@@ -35,8 +35,7 @@ class ProxyApiLoginAction extends Action
         $loginUsername = null;
         $loginAttribute = null;
 
-        foreach ($fields as $field)
-        {
+        foreach ($fields as $field) {
             $fieldname = $prefix . $field;
             $loginUsername = $data->getInputByKey($fieldname);
             $loginAttribute = $field;
@@ -46,7 +45,8 @@ class ProxyApiLoginAction extends Action
             }
         }
 
-        $requestData = array_merge($requestData,
+        $requestData = array_merge(
+            $requestData,
             [
                 'username' => $loginUsername,
             ]
@@ -55,8 +55,11 @@ class ProxyApiLoginAction extends Action
         $responseContent = Apiato::call('Authentication@CallOAuthServerTask', [$requestData]);
 
         // check if user email is confirmed only if that feature is enabled.
-        Apiato::call('Authentication@CheckIfUserIsConfirmedTask', [],
-            [['loginWithCredentials' => [$requestData['username'], $requestData['password'], $loginAttribute]]]);
+        Apiato::call(
+            'Authentication@CheckIfUserIsConfirmedTask',
+            [],
+            [['loginWithCredentials' => [$requestData['username'], $requestData['password'], $loginAttribute]]]
+        );
 
         $refreshCookie = Apiato::call('Authentication@MakeRefreshCookieTask', [$responseContent['refresh_token']]);
 

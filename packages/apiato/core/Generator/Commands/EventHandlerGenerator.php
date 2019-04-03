@@ -89,5 +89,4 @@ class EventHandlerGenerator extends GeneratorCommand implements ComponentsGenera
             ],
         ];
     }
-
 }

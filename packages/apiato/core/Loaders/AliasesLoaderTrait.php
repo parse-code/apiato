@@ -34,5 +34,4 @@ trait AliasesLoaderTrait
     {
         AliasLoader::getInstance()->alias($aliasKey, $aliasValue);
     }
-
 }

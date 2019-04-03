@@ -30,7 +30,7 @@ abstract class Exception extends SymfonyHttpException
      *
      * @var int
      */
-    CONST DEFAULT_STATUS_CODE = Response::HTTP_INTERNAL_SERVER_ERROR;
+    const DEFAULT_STATUS_CODE = Response::HTTP_INTERNAL_SERVER_ERROR;
 
     /**
      * @var string
@@ -128,7 +128,8 @@ abstract class Exception extends SymfonyHttpException
     {
         // if not testing environment, log the error message
         if ($this->environment != 'testing') {
-            Log::error('[ERROR] ' .
+            Log::error(
+                '[ERROR] ' .
                 'Status Code: ' . $statusCode . ' | ' .
                 'Message: ' . $message . ' | ' .
                 'Errors: ' . $this->errors . ' | ' .

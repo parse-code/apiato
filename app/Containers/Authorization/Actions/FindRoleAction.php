@@ -32,5 +32,4 @@ class FindRoleAction extends Action
 
         return $role;
     }
-
 }

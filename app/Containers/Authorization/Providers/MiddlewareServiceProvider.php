@@ -39,5 +39,4 @@ class MiddlewareServiceProvider extends MiddlewareProvider
         'can'      => \Illuminate\Auth\Middleware\Authorize::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
     ];
-
 }

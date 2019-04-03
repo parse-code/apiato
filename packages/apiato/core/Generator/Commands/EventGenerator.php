@@ -76,7 +76,7 @@ class EventGenerator extends GeneratorCommand implements ComponentsGenerator
         $model = $this->checkParameterOrAsk('model', 'Enter the name of the Model to generate this Event for');
 
         $handler = $this->checkParameterOrConfirm('handler', 'Do you want to generate a Handler for this Event?', true);
-        if($handler) {
+        if ($handler) {
             // we need to generate a corresponding handler
             // so call the other command
             $status = $this->call('apiato:generate:eventhandler', [
@@ -87,8 +87,7 @@ class EventGenerator extends GeneratorCommand implements ComponentsGenerator
 
             if ($status == 0) {
                 $this->printInfoMessage('The Handler for Event was successfully generated');
-            }
-            else {
+            } else {
                 $this->printErrorMessage('Could not generate the corresponding Handler!');
             }
         }
@@ -110,5 +109,4 @@ class EventGenerator extends GeneratorCommand implements ComponentsGenerator
             ],
         ];
     }
-
 }

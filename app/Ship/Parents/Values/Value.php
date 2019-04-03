@@ -12,7 +12,5 @@ use Apiato\Core\Traits\HasResourceKeyTrait;
  */
 abstract class Value extends AbstractValue
 {
-
     use HasResourceKeyTrait;
-
 }

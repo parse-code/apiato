@@ -18,5 +18,4 @@ abstract class ConsoleCommand extends LaravelCommand
      * @var  string
      */
     public $ui = 'cli';
-
 }

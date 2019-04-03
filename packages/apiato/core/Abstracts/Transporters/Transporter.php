@@ -16,7 +16,6 @@ use Illuminate\Support\Str;
  */
 abstract class Transporter extends Dto
 {
-
     use SanitizerTrait;
 
     /**
@@ -86,7 +85,7 @@ abstract class Transporter extends Dto
     {
 
         // if set as instance, return it directly
-        if(isset($this->instances[$name])){
+        if (isset($this->instances[$name])) {
             return $this->instances[$name];
         }
 
@@ -103,5 +102,4 @@ abstract class Transporter extends Dto
 
         return $value;
     }
-
 }

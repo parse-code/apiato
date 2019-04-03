@@ -13,7 +13,6 @@ use Illuminate\Support\ServiceProvider as LaravelAppServiceProvider;
  */
 abstract class MainProvider extends LaravelAppServiceProvider
 {
-
     use ProvidersLoaderTrait;
     use AliasesLoaderTrait;
 
@@ -31,7 +30,5 @@ abstract class MainProvider extends LaravelAppServiceProvider
      */
     public function register()
     {
-
     }
-
 }

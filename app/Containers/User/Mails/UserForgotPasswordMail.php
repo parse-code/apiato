@@ -14,7 +14,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
  */
 class UserForgotPasswordMail extends Mail implements ShouldQueue
 {
-
     use Queueable;
 
     /**

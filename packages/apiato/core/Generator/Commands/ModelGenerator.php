@@ -74,7 +74,7 @@ class ModelGenerator extends GeneratorCommand implements ComponentsGenerator
     public function getUserInputs()
     {
         $repository = $this->checkParameterOrConfirm('repository', 'Do you want to generate the corresponding Repository for this Model?', true);
-        if($repository) {
+        if ($repository) {
             // we need to generate a corresponding repository
             // so call the other command
             $status = $this->call('apiato:generate:repository', [
@@ -84,8 +84,7 @@ class ModelGenerator extends GeneratorCommand implements ComponentsGenerator
 
             if ($status == 0) {
                 $this->printInfoMessage('The Repository was successfully generated');
-            }
-            else {
+            } else {
                 $this->printErrorMessage('Could not generate the corresponding Repository!');
             }
         }
@@ -105,5 +104,4 @@ class ModelGenerator extends GeneratorCommand implements ComponentsGenerator
             ],
         ];
     }
-
 }

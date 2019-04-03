@@ -15,7 +15,6 @@ use App\Containers\User\Tests\ApiTestCase;
  */
 class DeleteUserTest extends ApiTestCase
 {
-
     protected $endpoint = 'delete@v1/users/{id}';
 
     protected $access = [

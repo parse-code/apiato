@@ -41,5 +41,4 @@ trait StateKeeperTrait
     {
         return $this->stateKeeperStates[$key];
     }
-
 }

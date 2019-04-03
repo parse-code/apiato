@@ -39,5 +39,4 @@ trait FormatterTrait
 
         return $operation . $this->capitalize($className);
     }
-
 }

@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Config;
  */
 class AssignUserToRoleTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/roles/assign?include=roles';
 
     protected $access = [
@@ -70,16 +69,15 @@ class AssignUserToRoleTest extends ApiTestCase
         $response = $this->makeCall($data);
 
         // assert response status is correct. Note: this will return 200 if `HASH_ID=false` in the .env
-        if(Config::get('apiato.hash-id')){
+        if (Config::get('apiato.hash-id')) {
             $response->assertStatus(400);
 
             $this->assertResponseContainKeyValue([
                 'message' => 'Only Hashed ID\'s allowed.',
             ]);
-        }else{
+        } else {
             $response->assertStatus(200);
         }
-
     }
 
     /**
@@ -115,5 +113,4 @@ class AssignUserToRoleTest extends ApiTestCase
 
         $this->assertContains($data['roles_ids'][1], $roleIds);
     }
-
 }

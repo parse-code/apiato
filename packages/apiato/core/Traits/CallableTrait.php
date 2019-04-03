@@ -55,7 +55,7 @@ trait CallableTrait
      */
     public function transactionalCall($class, $runMethodArguments = [], $extraMethodsToCall = [])
     {
-        return DB::transaction(function() use ($class, $runMethodArguments, $extraMethodsToCall) {
+        return DB::transaction(function () use ($class, $runMethodArguments, $extraMethodsToCall) {
             return $this->call($class, $runMethodArguments, $extraMethodsToCall);
         });
     }
@@ -71,7 +71,6 @@ trait CallableTrait
     {
         // in case passing apiato style names such as containerName@classType
         if ($this->needsParsing($class)) {
-
             $parsedClass = $this->parseClassName($class);
 
             $containerName = $this->capitalizeFirstLetter($parsedClass[0]);
@@ -257,5 +256,4 @@ trait CallableTrait
 
         return $runMethodArguments;
     }
-
 }

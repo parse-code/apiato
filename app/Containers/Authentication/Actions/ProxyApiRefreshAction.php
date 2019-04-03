@@ -20,7 +20,7 @@ class ProxyApiRefreshAction extends Action
      */
     public function run(ProxyRefreshTransporter $data): array
     {
-        if(!$data->refresh_token){
+        if (!$data->refresh_token) {
             throw new RefreshTokenMissedException();
         }
 

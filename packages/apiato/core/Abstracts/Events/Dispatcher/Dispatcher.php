@@ -29,7 +29,8 @@ class Dispatcher extends EventDispatcher
 
             /* Check if the delay is set and if it has the correct type */
             if (isset($delay)
-                && (is_numeric($delay)
+                && (
+                    is_numeric($delay)
                     || $delay instanceof \DateTimeInterface
                     || $delay instanceof \DateInterval
                 )
@@ -40,7 +41,6 @@ class Dispatcher extends EventDispatcher
             if (isset($queue) && is_string($queue)) {
                 $dispatcher->onQueue($queue);
             }
-
         } else {
             if ($event instanceof ShouldHandleNow) {
                 $event->handle();

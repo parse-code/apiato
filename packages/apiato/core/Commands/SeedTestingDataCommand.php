@@ -45,5 +45,4 @@ class SeedTestingDataCommand extends ConsoleCommand
 
         $this->info('Testing Data Seeded Successfully.');
     }
-
 }

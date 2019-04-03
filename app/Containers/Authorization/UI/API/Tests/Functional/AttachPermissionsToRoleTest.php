@@ -16,7 +16,6 @@ use App\Containers\Authorization\Tests\ApiTestCase;
  */
 class AttachPermissionsToRoleTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/permissions/attach';
 
     protected $access = [
@@ -76,7 +75,5 @@ class AttachPermissionsToRoleTest extends ApiTestCase
             'permission_id' => $permissionB->id,
             'role_id'       => $roleA->id
         ]);
-
     }
-
 }

@@ -44,8 +44,7 @@ trait ResponseTrait
         if ($transformerName instanceof Transformer) {
             // check, if we have provided a respective TRANSFORMER class
             $transformer = $transformerName;
-        }
-        else {
+        } else {
             // of if we just passed the classname
             $transformer = new $transformerName;
         }
@@ -225,5 +224,4 @@ trait ResponseTrait
     {
         return explode(',', Request::get('include'));
     }
-
 }

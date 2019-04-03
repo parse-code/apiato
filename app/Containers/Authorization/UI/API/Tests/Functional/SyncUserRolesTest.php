@@ -16,7 +16,6 @@ use App\Containers\User\Models\User;
  */
 class SyncUserRolesTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/roles/sync?include=roles';
 
     protected $access = [
@@ -59,5 +58,4 @@ class SyncUserRolesTest extends ApiTestCase
 
         $this->assertContains($data['roles_ids'][1], $roleIds);
     }
-
 }

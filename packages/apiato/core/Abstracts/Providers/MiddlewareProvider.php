@@ -11,7 +11,6 @@ use Apiato\Core\Loaders\MiddlewaresLoaderTrait;
  */
 abstract class MiddlewareProvider extends MainProvider
 {
-
     use MiddlewaresLoaderTrait;
 
     /**
@@ -42,7 +41,5 @@ abstract class MiddlewareProvider extends MainProvider
      */
     public function register()
     {
-
     }
-
 }

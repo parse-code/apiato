@@ -38,5 +38,4 @@ class GroupByCriteria extends Criteria
     {
         return $model->groupBy($this->field);
     }
-
 }

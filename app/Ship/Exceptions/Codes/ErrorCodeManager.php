@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Ship\Exceptions\Codes;
+
 use App\Ship\Exceptions\InternalErrorException;
 use Exception;
 use ReflectionClass;
@@ -83,8 +84,7 @@ class ErrorCodeManager
     {
         try {
             $class = new $codeTable;
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new InternalErrorException();
         }
 

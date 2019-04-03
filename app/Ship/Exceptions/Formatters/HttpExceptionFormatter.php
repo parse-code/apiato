@@ -63,5 +63,4 @@ class HttpExceptionFormatter extends CoreExceptionsFormatter
     {
         return $this->statusCode;
     }
-
 }

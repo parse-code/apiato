@@ -56,8 +56,7 @@ class LoginRequest extends Request
             'password' => 'required|min:3|max:30',
         ];
 
-        foreach ($allowedLoginFields as $key => $optionalValidators)
-        {
+        foreach ($allowedLoginFields as $key => $optionalValidators) {
             // build all other login fields together
             $allOtherLoginFields = array_except($allowedLoginFields, $key);
             $allOtherLoginFields = array_keys($allOtherLoginFields);
@@ -68,10 +67,12 @@ class LoginRequest extends Request
 
             $keyname = $prefix . $key;
 
-            $rules = array_merge($rules,
+            $rules = array_merge(
+                $rules,
                 [
                     $keyname => "required_without_all:{$allOtherLoginFields}|exists:users,{$key}|{$validators}",
-                ]);
+                ]
+            );
         }
 
         return $rules;

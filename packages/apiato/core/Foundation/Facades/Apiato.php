@@ -21,6 +21,4 @@ class Apiato extends Facade
     {
         return 'Apiato';
     }
-
 }
-

@@ -44,5 +44,4 @@ trait ViewsLoaderTrait
             $this->loadViewsFrom($directory, strtolower($containerName));
         }
     }
-
 }

@@ -58,8 +58,10 @@ trait TestsResponseHelperTrait
 
         foreach (LaravelArr::sortRecursive($data) as $key => $value) {
             $expected = $this->formatToExpectedJson($key, $value);
-            $this->assertTrue(LaravelStr::contains($httpResponse, $expected),
-                "The JSON fragment [ {$expected} ] does not exist in the response [ {$httpResponse} ].");
+            $this->assertTrue(
+                LaravelStr::contains($httpResponse, $expected),
+                "The JSON fragment [ {$expected} ] does not exist in the response [ {$httpResponse} ]."
+            );
         }
     }
 
@@ -109,5 +111,4 @@ trait TestsResponseHelperTrait
 
         return $responseContent;
     }
-
 }

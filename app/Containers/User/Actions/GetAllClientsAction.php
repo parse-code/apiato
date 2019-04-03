@@ -18,7 +18,8 @@ class GetAllClientsAction extends Action
      */
     public function run()
     {
-        return Apiato::call('User@GetAllUsersTask',
+        return Apiato::call(
+            'User@GetAllUsersTask',
             [],
             [
                 'addRequestCriteria',

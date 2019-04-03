@@ -10,7 +10,6 @@ use Exception;
 
 class UpdateSettingTask extends Task
 {
-
     protected $repository;
 
     public function __construct(SettingRepository $repository)
@@ -29,8 +28,7 @@ class UpdateSettingTask extends Task
     {
         try {
             return $this->repository->update($data, $id);
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new UpdateResourceFailedException();
         }
     }

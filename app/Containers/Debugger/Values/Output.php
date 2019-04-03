@@ -159,8 +159,11 @@ class Output extends Value
         // Browser
         $browser = Agent::browser();
 
-        $this->append(" * Access Token: " . substr($authHeader, 0,
-                $this->tokenDataCut) . (!is_null($authHeader) ? "..." : "N/A") . "\n");
+        $this->append(" * Access Token: " . substr(
+            $authHeader,
+            0,
+                $this->tokenDataCut
+        ) . (!is_null($authHeader) ? "..." : "N/A") . "\n");
         $this->append(" * User: " . $user . "\n");
         $this->append(" * Device: " . Agent::device() . " (Platform: " . Agent::platform() . ") \n");
         $this->append(" * Browser: " . $browser . " (Version: " . Agent::version($browser) . ") \n");
@@ -184,8 +187,10 @@ class Output extends Value
     public function responseData()
     {
         // Response Data
-        $responseContent = ($this->response && method_exists($this->response,
-                "content")) ? $this->response->content() : "N/A";
+        $responseContent = ($this->response && method_exists(
+            $this->response,
+                "content"
+        )) ? $this->response->content() : "N/A";
 
         $this->append(" * " . substr($responseContent, 0, $this->responseDataCut) . "..." . "\n");
     }
@@ -199,5 +204,4 @@ class Output extends Value
     {
         return $this->output .= $output;
     }
-
 }

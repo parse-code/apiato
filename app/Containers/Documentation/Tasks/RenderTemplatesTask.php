@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Config;
  */
 class RenderTemplatesTask extends Task
 {
-
     use DocsGeneratorTrait;
 
     protected $headerMarkdownContent;
@@ -47,5 +46,4 @@ class RenderTemplatesTask extends Task
 
         return $path;
     }
-
 }

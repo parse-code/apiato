@@ -77,11 +77,13 @@ class ControllerGenerator extends GeneratorCommand implements ComponentsGenerato
     {
         $ui = Str::lower($this->checkParameterOrChoice('ui', 'Select the UI for the controller', ['API', 'WEB']));
 
-        $stub = Str::lower($this->checkParameterOrChoice(
+        $stub = Str::lower(
+            $this->checkParameterOrChoice(
             'stub',
             'Select the Stub you want to load',
             ['Generic', 'CRUD.API', 'CRUD.WEB'],
-            0)
+            0
+        )
         );
 
         // load a new stub-file based on the users choice
@@ -123,5 +125,4 @@ class ControllerGenerator extends GeneratorCommand implements ComponentsGenerato
     {
         return 'Controller';
     }
-
 }

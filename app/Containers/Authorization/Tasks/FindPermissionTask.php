@@ -13,7 +13,6 @@ use App\Ship\Parents\Tasks\Task;
  */
 class FindPermissionTask extends Task
 {
-
     protected $repository;
 
     public function __construct(PermissionRepository $repository)
@@ -34,5 +33,4 @@ class FindPermissionTask extends Task
 
         return $permission;
     }
-
 }

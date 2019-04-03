@@ -16,8 +16,7 @@ use Monolog\Logger;
  */
 class RequestsLogger extends Value
 {
-
-    CONST TESTING_ENV = 'testing';
+    const TESTING_ENV = 'testing';
 
     protected $debuggingEnabled;
 

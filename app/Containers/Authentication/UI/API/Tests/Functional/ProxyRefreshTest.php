@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\DB;
  */
 class ProxyRefreshTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/clients/web/admin/refresh';
 
     protected $access = [

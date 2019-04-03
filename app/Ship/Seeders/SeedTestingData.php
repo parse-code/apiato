@@ -21,5 +21,4 @@ class SeedTestingData extends Seeder
     {
         // Create Testing data for live tests
     }
-
 }

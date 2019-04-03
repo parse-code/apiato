@@ -141,5 +141,4 @@ trait DocsGeneratorTrait
 
         return $dtF->diff($dtT)->format('%a days, %h hours, %i minutes and %s seconds');
     }
-
 }

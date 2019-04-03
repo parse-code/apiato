@@ -32,5 +32,4 @@ class Controller extends ApiController
 
         return response()->json($message);
     }
-
 }

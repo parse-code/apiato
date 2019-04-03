@@ -84,5 +84,4 @@ class ExceptionGenerator extends GeneratorCommand implements ComponentsGenerator
             ],
         ];
     }
-
 }

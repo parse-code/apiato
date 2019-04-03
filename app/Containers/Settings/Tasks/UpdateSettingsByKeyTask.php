@@ -15,7 +15,6 @@ use Exception;
  */
 class UpdateSettingsByKeyTask extends Task
 {
-
     protected $repository;
 
     public function __construct(SettingRepository $repository)
@@ -43,10 +42,8 @@ class UpdateSettingsByKeyTask extends Task
             return $this->repository->update([
                 'value' => $value
             ], $setting->id);
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new UpdateResourceFailedException();
         }
     }
-
 }

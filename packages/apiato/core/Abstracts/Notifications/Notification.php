@@ -23,5 +23,4 @@ class Notification extends LaravelNotification
     {
         return Config::get('notification.channels');
     }
-
 }

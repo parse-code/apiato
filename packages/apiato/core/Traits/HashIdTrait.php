@@ -59,7 +59,7 @@ trait HashIdTrait
      *
      * @return  array
      */
-    protected function decodeHashedIdsBeforeValidation(Array $requestData)
+    protected function decodeHashedIdsBeforeValidation(array $requestData)
     {
 
         // the hash ID feature must be enabled to use this decoder feature.
@@ -121,7 +121,6 @@ trait HashIdTrait
                 $data[$key] = $this->processField($value, $keysTodo);
             }
             return $data;
-
         } else {
             // check if the key we are looking for does, in fact, really exist
             if (!array_key_exists($field, $data)) {
@@ -150,7 +149,6 @@ trait HashIdTrait
         }
 
         foreach ($subject as $key => $value) {
-
             if ($key == $findKey && isset($subject[$findKey])) {
                 $subject[$key] = $callback($subject[$findKey]);
                 break;
@@ -255,5 +253,4 @@ trait HashIdTrait
             });
         }
     }
-
 }

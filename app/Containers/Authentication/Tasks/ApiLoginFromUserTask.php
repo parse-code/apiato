@@ -23,5 +23,4 @@ class ApiLoginFromUserTask extends Task
 
         return $personalAccessTokenResult;
     }
-
 }

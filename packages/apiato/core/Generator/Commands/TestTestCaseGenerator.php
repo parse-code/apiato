@@ -111,6 +111,4 @@ class TestTestCaseGenerator extends GeneratorCommand implements ComponentsGenera
     {
         return 'TestCase';
     }
-
 }
-

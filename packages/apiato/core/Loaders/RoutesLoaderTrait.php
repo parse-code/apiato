@@ -199,5 +199,4 @@ trait RoutesLoaderTrait
 
         return $fileInfo['filename'];
     }
-
 }

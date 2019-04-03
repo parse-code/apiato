@@ -72,11 +72,13 @@ class ServiceProviderGenerator extends GeneratorCommand implements ComponentsGen
      */
     public function getUserInputs()
     {
-        $stub = Str::lower($this->checkParameterOrChoice(
+        $stub = Str::lower(
+            $this->checkParameterOrChoice(
             'stub',
             'Select the Stub you want to load',
             ['Generic', 'MainServiceProvider'],
-            0)
+            0
+        )
         );
 
         return [

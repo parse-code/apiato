@@ -22,5 +22,4 @@ class GetAllRolesAction extends Action
 
         return $roles;
     }
-
 }

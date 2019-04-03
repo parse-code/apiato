@@ -30,5 +30,4 @@ abstract class Job extends AbstractJob implements ShouldQueue
     | provides access to the "onQueue" and "delay" queue helper methods.
     |
     */
-
 }

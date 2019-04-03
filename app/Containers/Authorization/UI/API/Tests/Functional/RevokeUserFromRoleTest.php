@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Config;
  */
 class RevokeUserFromRoleTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/roles/revoke';
 
     protected $access = [
@@ -76,16 +75,15 @@ class RevokeUserFromRoleTest extends ApiTestCase
 
 
         // assert response status is correct. Note: this will return 200 if `HASH_ID=false` in the .env
-        if (Config::get('apiato.hash-id')){
+        if (Config::get('apiato.hash-id')) {
             $response->assertStatus(400);
 
             $this->assertResponseContainKeyValue([
                 'message' => 'Only Hashed ID\'s allowed.',
             ]);
-        }else{
+        } else {
             $response->assertStatus(200);
         }
-
     }
 
     /**
@@ -121,5 +119,4 @@ class RevokeUserFromRoleTest extends ApiTestCase
             'role_id' => $roleB->id,
         ]);
     }
-
 }

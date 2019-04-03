@@ -50,5 +50,4 @@ class GenerateAPIDocsTask extends Task
         // return the past to that generated documentation
         return $this->getFullApiUrl($type);
     }
-
 }

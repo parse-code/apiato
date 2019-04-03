@@ -43,7 +43,7 @@ class RegisterUserAction extends Action
 
         Notification::send($user, new UserRegisteredNotification($user));
 
-        App::make(Dispatcher::class)->dispatch(New UserRegisteredEvent($user));
+        App::make(Dispatcher::class)->dispatch(new UserRegisteredEvent($user));
 
         return $user;
     }

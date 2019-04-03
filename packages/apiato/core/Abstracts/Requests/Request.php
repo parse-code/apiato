@@ -22,7 +22,6 @@ use Illuminate\Support\Facades\Config;
  */
 abstract class Request extends LaravelRequest
 {
-
     use HashIdTrait;
     use StateKeeperTrait;
     use SanitizerTrait;
@@ -212,7 +211,7 @@ abstract class Request extends LaravelRequest
      *
      * @return  array
      */
-    private function mergeUrlParametersWithRequestData(Array $requestData)
+    private function mergeUrlParametersWithRequestData(array $requestData)
     {
         if (isset($this->urlParameters) && !empty($this->urlParameters)) {
             foreach ($this->urlParameters as $param) {
@@ -310,5 +309,4 @@ abstract class Request extends LaravelRequest
 
         return $transporter;
     }
-
 }

@@ -65,7 +65,8 @@ abstract class ExceptionsFormatter extends HeimdalBaseFormatter
                 $customData = ['customData' => $customData];
             }
 
-            $data = array_merge($data,
+            $data = array_merge(
+                $data,
                 $customData
             );
         }
@@ -115,7 +116,7 @@ abstract class ExceptionsFormatter extends HeimdalBaseFormatter
      *
      * @return  mixed
      */
-    abstract function responseData(Exception $exception, JsonResponse $response);
+    abstract public function responseData(Exception $exception, JsonResponse $response);
 
     /**
      * @param \Exception                    $exception
@@ -123,10 +124,10 @@ abstract class ExceptionsFormatter extends HeimdalBaseFormatter
      *
      * @return  mixed
      */
-    abstract function modifyResponse(Exception $exception, JsonResponse $response);
+    abstract public function modifyResponse(Exception $exception, JsonResponse $response);
 
     /**
      * @return  mixed
      */
-    abstract function statusCode();
+    abstract public function statusCode();
 }

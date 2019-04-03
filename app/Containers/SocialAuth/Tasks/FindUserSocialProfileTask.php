@@ -28,8 +28,10 @@ class FindUserSocialProfileTask extends Task
                 $user = Socialite::driver($provider)->userFromToken($requestData['oauth_token']);
                 break;
             case 'twitter':
-                $user = Socialite::driver($provider)->userFromTokenAndSecret($requestData['oauth_token'],
-                    $requestData['oauth_secret']);
+                $user = Socialite::driver($provider)->userFromTokenAndSecret(
+                    $requestData['oauth_token'],
+                    $requestData['oauth_secret']
+                );
                 break;
             case 'add-your-provider-here':
                 $user = null;
@@ -41,5 +43,4 @@ class FindUserSocialProfileTask extends Task
 
         return $user;
     }
-
 }

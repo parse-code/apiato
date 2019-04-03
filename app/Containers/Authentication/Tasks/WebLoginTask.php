@@ -30,5 +30,4 @@ class WebLoginTask extends Task
 
         return Auth::user();
     }
-
 }

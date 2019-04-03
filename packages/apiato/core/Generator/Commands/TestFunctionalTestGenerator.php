@@ -104,6 +104,4 @@ class TestFunctionalTestGenerator extends GeneratorCommand implements Components
     {
         return 'DefaultFunctionalTest';
     }
-
 }
-

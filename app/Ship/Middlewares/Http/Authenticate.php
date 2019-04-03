@@ -13,6 +13,4 @@ use Illuminate\Auth\Middleware\Authenticate as LaravelAuthenticate;
  */
 class Authenticate extends LaravelAuthenticate
 {
-
-
 }

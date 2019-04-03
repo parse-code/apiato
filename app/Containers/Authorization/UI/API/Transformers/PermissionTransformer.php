@@ -12,7 +12,6 @@ use App\Ship\Parents\Transformers\Transformer;
  */
 class PermissionTransformer extends Transformer
 {
-
     protected $availableIncludes = [
 
     ];
@@ -36,5 +35,4 @@ class PermissionTransformer extends Transformer
             'display_name' => $permission->display_name,
         ];
     }
-
 }

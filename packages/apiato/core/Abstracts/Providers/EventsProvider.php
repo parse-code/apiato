@@ -21,5 +21,4 @@ class EventsProvider extends LaravelEventServiceProvider
     {
         parent::boot();
     }
-
 }

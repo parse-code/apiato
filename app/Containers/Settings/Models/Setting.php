@@ -42,5 +42,4 @@ class Setting extends Model
     protected $hidden = [
 
     ];
-
 }

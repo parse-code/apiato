@@ -20,7 +20,7 @@ class MethodNotAllowedExceptionFormatter extends CoreExceptionsFormatter
      *
      * @var  integer
      */
-    CONST STATUS_CODE = 405;
+    const STATUS_CODE = 405;
 
     /**
      * @param \Exception                    $exception
@@ -44,7 +44,7 @@ class MethodNotAllowedExceptionFormatter extends CoreExceptionsFormatter
      *
      * @return  mixed
      */
-    function modifyResponse(Exception $exception, JsonResponse $response)
+    public function modifyResponse(Exception $exception, JsonResponse $response)
     {
         return $response;
     }
@@ -56,5 +56,4 @@ class MethodNotAllowedExceptionFormatter extends CoreExceptionsFormatter
     {
         return self::STATUS_CODE;
     }
-
 }

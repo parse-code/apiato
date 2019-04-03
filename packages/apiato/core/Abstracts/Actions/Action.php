@@ -12,7 +12,6 @@ use Apiato\Core\Traits\HasRequestCriteriaTrait;
  */
 abstract class Action
 {
-
     use CallableTrait;
     use HasRequestCriteriaTrait;
 
@@ -43,5 +42,4 @@ abstract class Action
     {
         return $this->ui;
     }
-
 }

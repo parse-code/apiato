@@ -36,5 +36,4 @@ class GenerateDocumentationAction extends Action
 
         $console->info("Done! You can access your API Docs at: \n" . implode("\n", $documentationUrls));
     }
-
 }

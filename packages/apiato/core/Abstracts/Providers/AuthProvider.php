@@ -21,5 +21,4 @@ class AuthProvider extends LaravelAuthServiceProvider
     {
         $this->registerPolicies();
     }
-
 }

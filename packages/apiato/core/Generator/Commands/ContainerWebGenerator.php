@@ -217,8 +217,7 @@ class ContainerWebGenerator extends GeneratorCommand implements ComponentsGenera
             ],
         ];
 
-        foreach ($routes as $route)
-        {
+        foreach ($routes as $route) {
             $this->call('apiato:generate:route', [
                 '--container'   => $containerName,
                 '--file'        => $route['name'],
@@ -303,5 +302,4 @@ class ContainerWebGenerator extends GeneratorCommand implements ComponentsGenera
     {
         return 'json';
     }
-
 }

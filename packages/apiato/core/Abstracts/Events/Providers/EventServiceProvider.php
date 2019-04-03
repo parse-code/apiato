@@ -21,5 +21,4 @@ class EventServiceProvider extends \Illuminate\Events\EventServiceProvider
             });
         });
     }
-
 }

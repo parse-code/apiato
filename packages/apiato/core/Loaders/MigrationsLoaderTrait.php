@@ -39,10 +39,7 @@ trait MigrationsLoaderTrait
     private function loadMigrations($directory)
     {
         if (File::isDirectory($directory)) {
-
             $this->loadMigrationsFrom($directory);
-
         }
     }
-
 }

@@ -94,5 +94,4 @@ class SeederGenerator extends GeneratorCommand implements ComponentsGenerator
     {
         return $this->containerName . 'Seeder';
     }
-
 }

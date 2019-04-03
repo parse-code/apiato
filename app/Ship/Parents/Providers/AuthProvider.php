@@ -33,5 +33,4 @@ class AuthProvider extends AbstractAuthProvider
     {
         parent::boot();
     }
-
 }

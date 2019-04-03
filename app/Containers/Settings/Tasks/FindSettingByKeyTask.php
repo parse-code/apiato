@@ -13,7 +13,6 @@ use App\Ship\Parents\Tasks\Task;
  */
 class FindSettingByKeyTask extends Task
 {
-
     protected $repository;
 
     public function __construct(SettingRepository $repository)

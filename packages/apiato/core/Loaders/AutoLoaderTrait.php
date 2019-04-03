@@ -44,5 +44,4 @@ trait AutoLoaderTrait
 
         $this->loadFactoriesFromContainers();
     }
-
 }

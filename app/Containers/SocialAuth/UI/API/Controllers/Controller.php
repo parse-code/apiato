@@ -34,5 +34,4 @@ class Controller extends ApiController
             'access_token' => $data['token']->accessToken,
         ]);
     }
-
 }

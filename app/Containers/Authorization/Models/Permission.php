@@ -13,7 +13,6 @@ use Spatie\Permission\Models\Permission as SpatiePermission;
  */
 class Permission extends SpatiePermission
 {
-
     use HashIdTrait;
     use HasResourceKeyTrait;
 

@@ -90,7 +90,7 @@ trait TestsAuthHelperTrait
     private function createTestingUser($userDetails = null, $access = null)
     {
         // "inject" the confirmed status, if userdetails are submitted
-        if(is_array($userDetails)) {
+        if (is_array($userDetails)) {
             $defaults = [
                 'confirmed' => true,
             ];
@@ -135,7 +135,8 @@ trait TestsAuthHelperTrait
         ];
 
         // if no user detail provided, use the default details, to find the password or generate one before encoding it
-        return $this->prepareUserPassword($userDetails ? : $defaultUserDetails);;
+        return $this->prepareUserPassword($userDetails ? : $defaultUserDetails);
+        ;
     }
 
     /**
@@ -224,5 +225,4 @@ trait TestsAuthHelperTrait
             'roles'       => null
         ];
     }
-
 }

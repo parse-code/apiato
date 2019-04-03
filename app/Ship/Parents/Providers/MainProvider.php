@@ -27,5 +27,4 @@ abstract class MainProvider extends AbstractMainProvider
     {
         parent::register();
     }
-
 }

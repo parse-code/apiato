@@ -137,5 +137,4 @@ class LocalizationMiddleware extends Middleware
 
         return $supported_locales;
     }
-
 }

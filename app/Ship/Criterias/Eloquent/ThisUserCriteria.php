@@ -37,11 +37,10 @@ class ThisUserCriteria extends Criteria
      */
     public function apply($model, PrettusRepositoryInterface $repository)
     {
-        if(!$this->userId){
+        if (!$this->userId) {
             $this->userId = Auth::user()->id;
         }
 
         return $model->where('user_id', '=', $this->userId);
     }
-
 }

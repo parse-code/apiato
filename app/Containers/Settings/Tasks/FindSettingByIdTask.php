@@ -9,7 +9,6 @@ use Exception;
 
 class FindSettingByIdTask extends Task
 {
-
     protected $repository;
 
     public function __construct(SettingRepository $repository)
@@ -27,8 +26,7 @@ class FindSettingByIdTask extends Task
     {
         try {
             return $this->repository->find($id);
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new NotFoundException();
         }
     }

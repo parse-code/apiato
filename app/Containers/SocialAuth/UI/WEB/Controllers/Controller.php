@@ -32,5 +32,4 @@ class Controller extends WebController
     {
         return Socialite::driver($provider)->user();
     }
-
 }

@@ -16,11 +16,10 @@ use Request;
  */
 abstract class Repository extends PrettusRepository implements PrettusCacheable
 {
-
     use PrettusCacheableRepository;
     
     /**
-     * Define the maximum amount of entries per page that is returned. 
+     * Define the maximum amount of entries per page that is returned.
      * Set to 0 to "disable" this feature
      */
     protected $maxPaginationLimit = 0;
@@ -88,8 +87,8 @@ abstract class Repository extends PrettusRepository implements PrettusCacheable
         }
 
         // check for the maximum entries per pagination
-        if (   is_int($this->maxPaginationLimit) 
-            && $this->maxPaginationLimit > 0 
+        if (is_int($this->maxPaginationLimit)
+            && $this->maxPaginationLimit > 0
             && $limit > $this->maxPaginationLimit
         ) {
             $limit = $this->maxPaginationLimit;
@@ -102,5 +101,4 @@ abstract class Repository extends PrettusRepository implements PrettusCacheable
     {
         return substr(str_replace("App\\Containers\\", "", get_called_class()), 0, strpos(str_replace("App\\Containers\\", "", get_called_class()), '\\'));
     }
-
 }

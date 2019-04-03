@@ -15,7 +15,6 @@ use App\Containers\User\Tests\ApiTestCase;
  */
 class GetAllUsersTest extends ApiTestCase
 {
-
     protected $endpoint = 'get@v1/users';
 
     protected $access = [
@@ -91,5 +90,4 @@ class GetAllUsersTest extends ApiTestCase
         // assert only single user was returned
         $this->assertCount(1, $responseArray['data']);
     }
-
 }

@@ -27,5 +27,4 @@ abstract class MiddlewareProvider extends AbstractMiddlewareProvider
     {
         parent::register();
     }
-
 }

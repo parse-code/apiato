@@ -56,5 +56,4 @@ class GetAllUsersTask extends Task
     {
         $this->repository->pushCriteria(new RoleCriteria($roles));
     }
-
 }

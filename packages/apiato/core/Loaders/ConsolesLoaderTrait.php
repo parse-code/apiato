@@ -46,7 +46,6 @@ trait ConsolesLoaderTrait
     private function loadTheConsoles($directory)
     {
         if (File::isDirectory($directory)) {
-
             $files = File::allFiles($directory);
 
             foreach ($files as $consoleFile) {
@@ -60,7 +59,6 @@ trait ConsolesLoaderTrait
                     $this->commands([$consoleClass]);
                 }
             }
-
         }
     }
 
@@ -73,5 +71,4 @@ trait ConsolesLoaderTrait
     {
         return $consoleFile->getFilename() === "Routes.php";
     }
-
 }

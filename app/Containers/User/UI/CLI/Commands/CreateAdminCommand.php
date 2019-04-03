@@ -13,7 +13,6 @@ use App\Ship\Transporters\DataTransporter;
  */
 class CreateAdminCommand extends ConsoleCommand
 {
-
     protected $signature = 'apiato:create:admin';
 
     protected $description = 'Create a new User with the ADMIN role';

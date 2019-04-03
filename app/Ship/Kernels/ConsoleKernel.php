@@ -51,5 +51,4 @@ class ConsoleKernel extends LaravelConsoleKernel
 
         require app_path('Ship/Commands/Routes.php');
     }
-
 }

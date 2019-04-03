@@ -14,7 +14,6 @@ use App\Containers\User\Tests\ApiTestCase;
  */
 class UpdateUserTest extends ApiTestCase
 {
-
     protected $endpoint = 'put@v1/users/{id}';
 
     protected $access = [
@@ -110,6 +109,5 @@ class UpdateUserTest extends ApiTestCase
             'password' => 'The password must be at least 6 characters.',
             'name'     => 'The name must be at least 2 characters.',
         ]);
-
     }
 }

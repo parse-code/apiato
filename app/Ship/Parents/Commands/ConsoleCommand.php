@@ -11,5 +11,4 @@ use Apiato\Core\Abstracts\Commands\ConsoleCommand as AbstractConsoleCommand;
  */
 abstract class ConsoleCommand extends AbstractConsoleCommand
 {
-
 }

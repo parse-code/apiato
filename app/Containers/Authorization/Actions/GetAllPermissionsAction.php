@@ -22,5 +22,4 @@ class GetAllPermissionsAction extends Action
 
         return $permissions;
     }
-
 }

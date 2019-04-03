@@ -96,6 +96,4 @@ class TestUnitTestGenerator extends GeneratorCommand implements ComponentsGenera
     {
         return 'DefaultUnitTest';
     }
-
 }
-

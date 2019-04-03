@@ -11,5 +11,4 @@ use Apiato\Core\Abstracts\Exceptions\ErrorCodesTable as AbstractErrorCodesTable;
  */
 abstract class ErrorCodesTable extends AbstractErrorCodesTable
 {
-
 }

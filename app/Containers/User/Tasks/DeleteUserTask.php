@@ -15,7 +15,6 @@ use Exception;
  */
 class DeleteUserTask extends Task
 {
-
     protected $repository;
 
     public function __construct(UserRepository $repository)
@@ -34,8 +33,7 @@ class DeleteUserTask extends Task
     {
         try {
             return $this->repository->delete($user->id);
-        }
-        catch (Exception $exception) {
+        } catch (Exception $exception) {
             throw new DeleteResourceFailedException();
         }
     }

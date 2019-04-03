@@ -20,5 +20,4 @@ class GetAuthenticatedUserTask extends Task
     {
         return Auth::user();
     }
-
 }

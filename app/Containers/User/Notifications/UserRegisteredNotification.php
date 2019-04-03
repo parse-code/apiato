@@ -9,7 +9,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class UserRegisteredNotification extends Notification implements ShouldQueue
 {
-
     use Queueable;
 
     /**
@@ -38,5 +37,4 @@ class UserRegisteredNotification extends Notification implements ShouldQueue
             // ... do you own customization
         ];
     }
-
 }

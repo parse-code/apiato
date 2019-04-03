@@ -27,5 +27,4 @@ class RoleRepository extends Repository
         'display_name' => 'like',
         'description'  => 'like',
     ];
-
 }

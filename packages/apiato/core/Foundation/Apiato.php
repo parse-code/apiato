@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\File;
  */
 class Apiato
 {
-
     use CallableTrait;
 
     /**
@@ -168,7 +167,6 @@ class Apiato
                 && $tokens[$i - 1][0] == T_WHITESPACE
                 && $tokens[$i][0] == T_STRING
             ) {
-
                 $class_name = $tokens[$i][1];
                 $classes[] = $class_name;
             }
@@ -199,8 +197,11 @@ class Apiato
      */
     public function uncamelize($word, $splitter = " ", $uppercase = true)
     {
-        $word = preg_replace('/(?!^)[[:upper:]][[:lower:]]/', '$0',
-            preg_replace('/(?!^)[[:upper:]]+/', $splitter . '$0', $word));
+        $word = preg_replace(
+            '/(?!^)[[:upper:]][[:lower:]]/',
+            '$0',
+            preg_replace('/(?!^)[[:upper:]]+/', $splitter . '$0', $word)
+        );
 
         return $uppercase ? ucwords($word) : $word;
     }
@@ -272,5 +273,4 @@ class Apiato
             throw new ClassDoesNotExistException("Class ($className) is not installed.");
         }
     }
-
 }

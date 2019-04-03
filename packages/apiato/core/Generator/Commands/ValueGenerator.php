@@ -91,6 +91,4 @@ class ValueGenerator extends GeneratorCommand implements ComponentsGenerator
     {
         return 'DefaultValue';
     }
-
 }
-

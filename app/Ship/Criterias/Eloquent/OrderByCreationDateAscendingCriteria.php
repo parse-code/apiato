@@ -23,5 +23,4 @@ class OrderByCreationDateAscendingCriteria extends Criteria
     {
         return $model->orderBy('created_at', 'asc');
     }
-
 }

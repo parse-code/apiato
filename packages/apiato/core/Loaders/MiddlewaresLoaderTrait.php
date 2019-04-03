@@ -66,5 +66,4 @@ trait MiddlewaresLoaderTrait
             $this->app['router']->aliasMiddleware($key, $routeMiddleware);
         }
     }
-
 }

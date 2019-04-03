@@ -156,5 +156,4 @@ class Controller extends ApiController
 
         return $this->noContent(202);
     }
-
 }

@@ -127,6 +127,4 @@ class ContainerGenerator extends GeneratorCommand implements ComponentsGenerator
     {
         return 'json';
     }
-
-
 }

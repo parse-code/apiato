@@ -25,7 +25,8 @@ class CreateRoleAction extends Action
     {
         $level = is_null($data->level) ? 0 : $data->level ;
 
-        $role = Apiato::call('Authorization@CreateRoleTask',
+        $role = Apiato::call(
+            'Authorization@CreateRoleTask',
             [$data->name, $data->description, $data->display_name, $level]
         );
 

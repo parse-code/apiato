@@ -118,5 +118,4 @@ class RouteGenerator extends GeneratorCommand implements ComponentsGenerator
             ],
         ];
     }
-
 }

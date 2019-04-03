@@ -76,5 +76,4 @@ class ExceptionsHandler extends CoreExceptionsHandler
             ? response()->json(['error' => 'Unauthenticated.'], 401)
             : redirect()->guest('login');
     }
-
 }

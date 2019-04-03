@@ -25,5 +25,4 @@ class CustomErrorCodesTable extends ErrorCodesTable
      *  ];
      *
      */
-
 }

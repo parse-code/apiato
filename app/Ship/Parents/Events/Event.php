@@ -14,7 +14,5 @@ use Illuminate\Queue\SerializesModels;
  */
 abstract class Event extends AbstractEvent
 {
-
     use Dispatchable, InteractsWithSockets, SerializesModels;
-
 }

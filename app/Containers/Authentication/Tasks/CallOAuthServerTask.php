@@ -19,7 +19,7 @@ class CallOAuthServerTask extends Task
     /**
      * @string
      */
-    CONST AUTH_ROUTE = '/v1/oauth/token';
+    const AUTH_ROUTE = '/v1/oauth/token';
 
     /**
      * @param $data

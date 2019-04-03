@@ -88,8 +88,7 @@ class RequestGenerator extends GeneratorCommand implements ComponentsGenerator
                 '--container' => $this->containerName,
                 '--file' => $transporterName,
             ]);
-        }
-        else {
+        } else {
             $transporterComment = '// ';
             $transporterClass = '\\App\\Ship\\Transporters\\DataTransporter::class';
         }
@@ -112,5 +111,4 @@ class RequestGenerator extends GeneratorCommand implements ComponentsGenerator
             ],
         ];
     }
-
 }

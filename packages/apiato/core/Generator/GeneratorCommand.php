@@ -20,7 +20,6 @@ use Symfony\Component\Console\Input\InputOption;
  */
 abstract class GeneratorCommand extends Command
 {
-
     use ParserTrait, PrinterTrait, FileSystemTrait, FormatterTrait;
 
     /**
@@ -28,26 +27,26 @@ abstract class GeneratorCommand extends Command
      *
      * @var string
      */
-    CONST ROOT = 'app';
+    const ROOT = 'app';
 
     /**
      * Relative path for the stubs (relative to this directory / file)
      *
      * @var string
      */
-    CONST STUB_PATH = 'Stubs/*';
+    const STUB_PATH = 'Stubs/*';
 
     /**
      * Relative path for the custom stubs (relative to the app/Ship directory!
      */
-    CONST CUSTOM_STUB_PATH = 'Generators/CustomStubs/*';
+    const CUSTOM_STUB_PATH = 'Generators/CustomStubs/*';
 
     /**
      * Containers main folder
      *
      * @var string
      */
-    CONST CONTAINER_DIRECTORY_NAME = 'Containers';
+    const CONTAINER_DIRECTORY_NAME = 'Containers';
 
     /**
      * @var string
@@ -240,8 +239,7 @@ abstract class GeneratorCommand extends Command
     {
         // check if we have already have a param set
         $value = $this->option($param);
-        if($value == null)
-        {
+        if ($value == null) {
             // there was no value provided via CLI, so ask the user..
             $value = $this->ask($question, $default);
         }
@@ -262,8 +260,7 @@ abstract class GeneratorCommand extends Command
     {
         // check if we have already have a param set
         $value = $this->option($param);
-        if($value == null)
-        {
+        if ($value == null) {
             // there was no value provided via CLI, so ask the user..
             $value = $this->choice($question, $choices, $default);
         }
@@ -282,8 +279,7 @@ abstract class GeneratorCommand extends Command
     {
         // check if we have already have a param set
         $value = $this->option($param);
-        if ($value === null)
-        {
+        if ($value === null) {
             // there was no value provided via CLI, so ask the user..
             $value = $this->confirm($question, $default);
         }
@@ -298,8 +294,8 @@ abstract class GeneratorCommand extends Command
      * @param $data
      * @return mixed
      */
-    private function sanitizeUserData($data) {
-
+    private function sanitizeUserData($data)
+    {
         if (! array_key_exists('path-parameters', $data)) {
             $data['path-parameters'] = array();
         }
@@ -349,5 +345,4 @@ abstract class GeneratorCommand extends Command
 
         return $str;
     }
-
 }

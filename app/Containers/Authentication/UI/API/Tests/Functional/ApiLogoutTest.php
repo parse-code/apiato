@@ -14,7 +14,6 @@ use App\Containers\Authentication\Tests\ApiTestCase;
  */
 class ApiLogoutTest extends ApiTestCase
 {
-
     protected $endpoint = 'delete@v1/logout';
 
     protected $access = [
@@ -46,7 +45,5 @@ class ApiLogoutTest extends ApiTestCase
         $this->assertResponseContainKeyValue([
             'message' => 'Token revoked successfully.',
         ]);
-
     }
-
 }

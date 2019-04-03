@@ -13,8 +13,6 @@ use Apiato\Core\Traits\HasResourceKeyTrait;
  */
 abstract class Model extends AbstractModel
 {
-
     use HashIdTrait;
     use HasResourceKeyTrait;
-
 }

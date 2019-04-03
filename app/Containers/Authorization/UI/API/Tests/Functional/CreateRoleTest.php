@@ -14,7 +14,6 @@ use App\Containers\Authorization\Tests\ApiTestCase;
  */
 class CreateRoleTest extends ApiTestCase
 {
-
     protected $endpoint = 'post@v1/roles';
 
     protected $auth = true;
@@ -78,5 +77,4 @@ class CreateRoleTest extends ApiTestCase
         // assert response status is correct
         $response->assertStatus(422);
     }
-
 }

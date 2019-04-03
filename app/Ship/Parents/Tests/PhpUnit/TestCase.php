@@ -53,5 +53,4 @@ abstract class TestCase extends AbstractTestCase
 
         return $app;
     }
-
 }

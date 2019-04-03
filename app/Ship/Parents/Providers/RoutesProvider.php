@@ -21,5 +21,4 @@ class RoutesProvider extends AbstractRoutesProvider
     {
         parent::boot();
     }
-
 }

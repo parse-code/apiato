@@ -94,6 +94,4 @@ class MailGenerator extends GeneratorCommand implements ComponentsGenerator
     {
         return 'DefaultMail';
     }
-
 }
-

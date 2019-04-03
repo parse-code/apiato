@@ -94,5 +94,4 @@ class SubActionGenerator extends GeneratorCommand implements ComponentsGenerator
     {
         return 'DefaultAction';
     }
-
 }

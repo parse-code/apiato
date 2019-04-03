@@ -21,7 +21,6 @@ use Spatie\Fractalistic\ArraySerializer;
  */
 class ListContainerDependenciesCommand extends ConsoleCommand
 {
-
     protected $signature = 'apiato:list:dependencies {containerPath}';
 
     protected $description = 'Lists all dependencies from the given container to other containers.';
@@ -87,10 +86,9 @@ class ListContainerDependenciesCommand extends ConsoleCommand
 
             if (is_array($value)) {
                 $string .= PHP_EOL . $this->prettyPrintArray($value, $indent + $indentModifier) . PHP_EOL;
-            } else if (is_string($value) || settype($item, 'string') !== false || (is_object($value) && method_exists($value, '__toString'))){
+            } elseif (is_string($value) || settype($item, 'string') !== false || (is_object($value) && method_exists($value, '__toString'))) {
                 $string .= $value . PHP_EOL;
-            }
-            else {
+            } else {
                 throw new \InvalidArgumentException('Current value cannot be converted to string: value=' . $value);
             }
         }
@@ -218,5 +216,4 @@ class ListContainerDependenciesCommand extends ConsoleCommand
 
         return $filesInContainers;
     }
-
 }

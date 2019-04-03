@@ -75,11 +75,13 @@ class ActionGenerator extends GeneratorCommand implements ComponentsGenerator
     public function getUserInputs()
     {
         $model = $this->checkParameterOrAsk('model', 'Enter the name of the model this action is for.', $this->containerName);
-        $stub = Str::lower($this->checkParameterOrChoice(
+        $stub = Str::lower(
+            $this->checkParameterOrChoice(
             'stub',
             'Select the Stub you want to load',
             ['Generic', 'GetAll', 'Find', 'Create', 'Update', 'Delete'],
-            0)
+            0
+        )
         );
 
         // load a new stub-file based on the users choice

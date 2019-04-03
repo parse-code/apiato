@@ -26,6 +26,5 @@ class AuthorizationPermissionsSeeder_1 extends Seeder
         Apiato::call('Authorization@CreatePermissionTask', ['access-dashboard', 'Access the admins dashboard.']);
 
         // ...
-
     }
 }

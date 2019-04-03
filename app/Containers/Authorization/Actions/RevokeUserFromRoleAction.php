@@ -44,5 +44,4 @@ class RevokeUserFromRoleAction extends Action
 
         return $user;
     }
-
 }

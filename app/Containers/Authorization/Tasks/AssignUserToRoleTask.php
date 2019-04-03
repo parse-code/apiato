@@ -24,5 +24,4 @@ class AssignUserToRoleTask extends Task
     {
         return $user->assignRole($roles);
     }
-
 }
