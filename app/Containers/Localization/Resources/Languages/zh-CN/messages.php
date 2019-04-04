@@ -2,6 +2,6 @@
 
 return [
 
-    'welcome' => 'welcome',
+    'welcome' => '欢迎',
 
 ];

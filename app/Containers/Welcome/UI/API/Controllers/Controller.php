@@ -21,7 +21,7 @@ class Controller extends ApiController
         $message = Apiato::call('Welcome@FindMessageForApiV1VisitorAction');
 
         return response()->json([
-            'message' => 'xxx'
+            'message' => $message
         ]);
     }
 }

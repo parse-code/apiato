@@ -1,132 +1,57 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Apiato</title>
-        <style>
-            @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@extends('theme::blank')
 
-            .login-page {
-                width: 360px;
-                padding: 8% 0 0;
-                margin: auto;
-            }
-            .form {
-                position: relative;
-                z-index: 1;
-                background: #FFFFFF;
-                max-width: 360px;
-                margin: 0 auto 100px;
-                padding: 45px;
-                text-align: center;
-                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-            }
-            .form input {
-                font-family: "Roboto", sans-serif;
-                outline: 0;
-                background: #f2f2f2;
-                width: 100%;
-                border: 0;
-                margin: 0 0 15px;
-                padding: 15px;
-                box-sizing: border-box;
-                font-size: 14px;
-            }
-            .form button {
-                font-family: "Roboto", sans-serif;
-                text-transform: uppercase;
-                outline: 0;
-                background: #4CAF50;
-                width: 100%;
-                border: 0;
-                padding: 15px;
-                color: #FFFFFF;
-                font-size: 14px;
-                -webkit-transition: all 0.3 ease;
-                transition: all 0.3 ease;
-                cursor: pointer;
-            }
-            .form button:hover,.form button:active,.form button:focus {
-                background: #43A047;
-            }
-            .form .message {
-                margin: 15px 0 0;
-                color: #b3b3b3;
-                font-size: 12px;
-            }
-            .form .message a {
-                color: #4CAF50;
-                text-decoration: none;
-            }
-            .form .register-form {
-                display: none;
-            }
-            .container {
-                position: relative;
-                z-index: 1;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-            .container:before, .container:after {
-                content: "";
-                display: block;
-                clear: both;
-            }
-            .container .info {
-                margin: 50px auto;
-                text-align: center;
-            }
-            h1, .container .info h1 {
-                margin: 0 0 15px;
-                padding: 0;
-                font-size: 36px;
-                font-weight: 300;
-                color: #1a1a1a;
-            }
-
-            .center { text-align: center;  }
-
-            .container .info span {
-                color: #4d4d4d;
-                font-size: 12px;
-            }
-            .container .info span a {
-                color: #000000;
-                text-decoration: none;
-            }
-            .container .info span .fa {
-                color: #EF3B3A;
-            }
-            body {
-                background: #ffffff;
-                font-family: "Roboto", sans-serif;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-            }
-            .text-red {
-                color: red;
-                margin-bottom: 10px;
-            }
-        </style>
-    </head>
-    <body>
-
-    <div class="login-page">
-        <h1 class="center">Login</h1>
-        <div class="form">
-            <form class="login-form" action="{{route('post_admin_login_form')}}" method="post">
-                {{ csrf_field() }}
-                @if(session('status'))
-                    <div class="text-red">{{ session('status') }}</div>
-                @endif
-                <input type="text"  placeholder="email" id="email" name="email"/>
-                <span class="text-red">{{ $errors->first('email') }}</span>
-                <input type="password" placeholder="password" id="password" name="password"/>
-                <span class="text-red">{{ $errors->first('password') }}</span>
-
-                <button>login</button>
-            </form>
+@section('content')
+    <div class="d-flex flex-column flex">
+        <div class="row no-gutters h-100">
+            <div class="col-md-6 bg-primary" style="">
+                <div class="p-3 p-md-5 d-flex flex-column h-100">
+                    <h4 class="mb-3 text-white">{{config('app.name')}}</h4>
+                    <div class="text-fade">{{config('app.name')}}</div>
+                    <div class="d-flex flex align-items-center justify-content-center"></div>
+                    <div class="d-flex text-sm text-fade"><a href="index.html" class="text-white">About</a> <span class="flex"></span> <a href="#" class="text-white mx-1">Terms</a> <a href="#" class="text-white mx-1">Policy</a></div>
+                </div>
+            </div>
+            <div class="col-md-6" id="content-body">
+                <div class="p-3 p-md-5">
+                    <h5>Welcome back</h5>
+                    <p><small class="text-muted">Login to manage your account</small></p>
+                    <form class="" role="form" action="{{route('post_admin_login_form')}}" method="post">
+                        @if(session('status'))
+                        <div class="alert alert-danger">{{ session('status') }}</div>
+                        @endif
+                        {{ csrf_field() }}
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control is-invalid" placeholder="Enter email" id="email" name="email">
+                            <ul class="list-unstyled text-sm mt-1 text-muted filled" id="parsley-id-30">
+                                <li class="parsley-required">This value is required.</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label><input type="password" class="form-control " placeholder="Password" id="password" name="password">
+                            <div class="my-3 text-right"><a href="forgot-password.html" class="text-muted" data-pjax-state="">Forgot password?</a></div>
+                        </div>
+                        <div class="checkbox mb-3"><label class="ui-check"><input type="checkbox"><i></i> Remember me</label></div>
+                        <button type="submit" class="btn btn-primary mb-4">Sign in</button>
+                        <div>Do not have an account? <a href="signup.html" class="text-primary" data-pjax-state="">Sign up</a></div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    </body>
-</html>
+    {{--<div class="form">--}}
+        {{--<form class="login-form" action="{{route('post_admin_login_form')}}" method="post">--}}
+            {{--{{ csrf_field() }}--}}
+            {{--@if(session('status'))--}}
+                {{--<div class="text-red">{{ session('status') }}</div>--}}
+            {{--@endif--}}
+            {{--<input type="text"  placeholder="email" id="email" name="email"/>--}}
+            {{--<span class="text-red">{{ $errors->first('email') }}</span>--}}
+            {{--<input type="password" placeholder="password" id="password" name="password"/>--}}
+            {{--<span class="text-red">{{ $errors->first('password') }}</span>--}}
+
+            {{--<button>login</button>--}}
+        {{--</form>--}}
+    {{--</div>--}}
+@endsection

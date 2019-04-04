@@ -17,6 +17,6 @@ class FindMessageForApiV1VisitorAction extends Action
      */
     public function run()
     {
-        return __('localization::messages.welcome') . ' (API V1)';
+        return trans('localization::messages.welcome') . ' (V1)';
     }
 }
