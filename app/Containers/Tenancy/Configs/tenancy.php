@@ -15,6 +15,11 @@
 use Hyn\Tenancy\Database\Connection;
 
 return [
+    /**
+     * Random key used for tenant database user password
+     */
+    'key' => env('TENANCY_KEY', env('APP_KEY')),
+
     'models' => [
         /**
          * Specify different models to be used for the global, system database
@@ -67,7 +72,7 @@ return [
          *
          * This should be enabled for MySQL, but not for MariaDB and PostgreSQL.
          */
-        'uuid-limit-length-to-32' => env('LIMIT_UUID_LENGTH_32', true),
+        'uuid-limit-length-to-32' => env('LIMIT_UUID_LENGTH_32', false),
 
         /**
          * Specify the disk you configured in the filesystems.php file where to store
@@ -78,7 +83,7 @@ return [
          * @info If set to false will disable all tenant specific filesystem auto magic
          *       like the config, vendor overrides.
          */
-        'disk' => 'public',
+        'disk' => null,
 
         /**
          * Automatically generate a tenant directory based on the random id of the
@@ -113,6 +118,9 @@ return [
         'cache' => 10,
     ],
     'hostname' => [
+
+        'reserved_fqdn' => ['admin', 'demo', 'api', 'console', 'app'],
+
         /**
          * If you want the multi tenant application to fall back to a default
          * hostname/website in case the requested hostname was not found
@@ -159,7 +167,7 @@ return [
          * This will resolve issues with password reset mails etc using the
          * correct domain.
          */
-        'update-app-url' => true,
+        'update-app-url' => false,
     ],
     'db' => [
         /**
@@ -212,7 +220,7 @@ return [
          * @warn this has to be an absolute path, feel free to use helper methods like
          * base_path() or database_path() to set this up.
          */
-        'tenant-migrations-path' => app_path('Containers/*/Data/Migrations'),
+        'tenant-migrations-path' => database_path('migrations/tenant'),
 
         /**
          * The default Seeder class used on newly created databases and while
@@ -223,8 +231,7 @@ return [
          *
          * @warn specify a valid fully qualified class name.
          */
-        'tenant-seed-class' => null,
-
+        'tenant-seed-class' => false,
 //      eg an admin seeder under `app/Seeders/AdminSeeder.php`:
 //        'tenant-seed-class' => App\Seeders\AdminSeeder::class,
 
@@ -275,7 +282,7 @@ return [
          *
          * @info set to true to enable.
          */
-        'auto-delete-tenant-database' => env('TENANCY_DATABASE_AUTO_DELETE', true),
+        'auto-delete-tenant-database' => env('TENANCY_DATABASE_AUTO_DELETE', false),
 
         /**
          * Automatically delete the user needed to access the tenant database.
@@ -283,7 +290,7 @@ return [
          * @info Set to false to disable.
          * @info Only deletes in case tenant database is set to be deleted.
          */
-        'auto-delete-tenant-database-user' => env('TENANCY_DATABASE_AUTO_DELETE_USER', true),
+        'auto-delete-tenant-database-user' => env('TENANCY_DATABASE_AUTO_DELETE_USER', false),
 
         /**
          * Define a list of classes that you wish to force onto the tenant or system connection.

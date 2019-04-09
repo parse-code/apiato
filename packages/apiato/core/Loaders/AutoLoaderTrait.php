@@ -28,7 +28,7 @@ trait AutoLoaderTrait
     {
         // the config files should be loaded first from all the directories in their own loop
         $this->loadConfigsFromShip();
-        $this->loadMigrationsFromShip();
+        // $this->loadMigrationsFromShip();
         $this->loadViewsFromShip();
         $this->loadConsolesFromShip();
 
@@ -37,7 +37,7 @@ trait AutoLoaderTrait
             $this->loadConfigsFromContainers($containerName);
             $this->loadLocalsFromContainers($containerName);
             $this->loadOnlyMainProvidersFromContainers($containerName);
-            $this->loadMigrationsFromContainers($containerName);
+            //$this->loadMigrationsFromContainers($containerName);
             $this->loadConsolesFromContainers($containerName);
             $this->loadViewsFromContainers($containerName);
         }

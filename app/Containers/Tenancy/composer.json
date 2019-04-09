@@ -2,6 +2,6 @@
   "name": "shoptima/tenancy",
   "description": "Tenancy Container",
   "require": {
-    "hyn/multi-tenant": "*"
+    "hyn/multi-tenant": "^5.4"
   }
 }

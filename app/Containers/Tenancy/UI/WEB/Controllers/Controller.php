@@ -13,6 +13,7 @@ use Hyn\Tenancy\Models\Website;
 use Hyn\Tenancy\Contracts\Repositories\WebsiteRepository;
 use Illuminate\Support\Facades\Artisan;
 use Apiato\Core\Foundation\Facades\Apiato;
+use App\Containers\Tenancy\UI\WEB\Requests\TenantRequest;
 
 /**
  * Class Controller
@@ -25,9 +26,11 @@ class Controller extends WebController
     /**
      * @return  string
      */
-    public function index()
+    public function index(WebsiteRepository $repository)
     {
-        return view('tenancy::index');
+        $websites = Website::paginate(5);
+        return view('tenancy::index')
+            ->with('websites', $websites);
     }
 
     public function create()
@@ -35,56 +38,37 @@ class Controller extends WebController
         return view('tenancy::create');
     }
 
-    public function store()
+    public function store(TenantRequest $request)
     {
-        $fqdn = request()->get('domain').'.'.config('app.domain');
+        $fqdn = request()->get('domain').'.'.config('tenancy.hostname.default');
+        $check_domain_result = $this->checkDomain($fqdn);
+
+        if ( false == $check_domain_result['result']) {
+            return redirect()->back()->withInput(request()->all())->withErrors([$check_domain_result['message']]);
+        }
         $hostname = Apiato::call('Tenancy@CreateTenantAction', [$fqdn]);
-
-        tenant($hostname->website);
-
-        Artisan::call('db:seed', [
-            '--class' => \App\Containers\Seeder\Tenant\DefaultTanantSeeder::class,
-        ]);
-
-        $user = User::create([
-            'email' => request()->get('email'),
-            'password' => bcrypt(request()->get('password')),
-            'name' => request()->get('company_name'). ' Admin'
-        ]);
-
-        $admin_role = Apiato::call('Authorization@CreateRoleTask', ['admin', '管理员', '管理员', 999]);
-
-        $user->assignRole($admin_role);
-
-        setting('account_name', request()->get('company_name'));
-
-        return response()->json([
-            'result' => true,
-            'redirect' => $hostname->fqdn
-        ]);
+        return redirect('tenancy');
     }
 
-    public function checkDomain($fqdn=null, HostnameRepository $hostnameRepository)
+    public function checkDomain($fqdn)
     {
-        $fqdn = $fqdn ?: request()->get('domain').'.'.config('app.domain');
-
-        if (in_array($fqdn, config('app.reserved_fqdn'))) {
-            return response()->json([
+        if (in_array($fqdn, config('tenancy.hostname.reserved_fqdn'))) {
+            return [
                 'result' => false,
                 'message' => 'Can not use this name.'
-            ]);
+            ];
         }
-        if ($hostname = $hostnameRepository->findByHostname($fqdn)) {
-            return response()->json([
+        if ($hostname = app(HostnameRepository::class)->findByHostname($fqdn)) {
+            return [
                 'result' => false,
                 'message' => 'Name has been token',
-            ]);
+            ];
         }
 
-        return response()->json([
+        return  [
             'result' => true,
-            'fqdn' => $fqdn
-        ]);
+            'message'
+        ];
     }
 
     public function setCookie()

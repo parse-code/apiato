@@ -1,25 +1,17 @@
 <?php
 
-$router->group(['domain' => config('app.url')], function () use ($router) {
+$router->group(['domain' => config('app.url'), 'prefix' => 'tenancy'], function () use ($router) {
     $router->get('/', [
         'uses' => 'Controller@index'
     ]);
 
-    $router->get('create', [
-        'uses' => 'Controller@create'
+    $router->get('/create', [
+        'uses' => 'Controller@create',
+        'as' => 'tenancy.create'
     ]);
 
-    $router->post('create', [
-        'uses' => 'Controller@store'
-    ]);
-
-    $router->post('check_domain', [
-        'uses' => 'Controller@checkDomain',
-        'as' => 'domain.check'
-    ]);
-
-    $router->get('setcookie', [
-        'uses' => 'Controller@setCookie',
-        'as' => 'cookie.set'
+    $router->post('/create', [
+        'uses' => 'Controller@store',
+        'as' => 'tenancy.store'
     ]);
 });

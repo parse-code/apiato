@@ -4,7 +4,7 @@ notie.setOptions({
   overlayClickDismiss: true,
   overlayOpacity: 0.75,
   transitionCurve: 'ease',
-  transitionDuration: 0.35,
+  transitionDuration: 0.2,
   transitionSelector: 'all',
   classes: {
     container: 'notie-container',

@@ -5,7 +5,6 @@ namespace App\Containers\Tenancy\Providers;
 use App\Ship\Parents\Providers\MainProvider;
 use Hyn\Tenancy\Facades\TenancyFacade;
 use Hyn\Tenancy\Providers\TenancyProvider;
-use Hyn\Tenancy\Providers\WebserverProvider;
 
 /**
  * Class MainServiceProvider.
@@ -21,7 +20,7 @@ class MainServiceProvider extends MainProvider
      */
     public $serviceProviders = [
         TenancyProvider::class,
-        WebserverProvider::class,
+        CacheServiceProvider::class,
     ];
 
     /**
