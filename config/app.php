@@ -14,6 +14,8 @@ return [
 
     'name' => env('APP_NAME', 'apiato'),
 
+    'domain' => env('DOMAIN', 'localhost'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

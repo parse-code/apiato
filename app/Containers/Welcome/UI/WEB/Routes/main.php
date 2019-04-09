@@ -5,7 +5,8 @@ $router->get('/', [
     'uses' => 'Controller@sayWelcome',
 ]);
 
-$router->get('/calendar', [
-    'as'   => 'show_calendar',
-    'uses' => 'Controller@showCalendar',
+$router->get('/form', [
+    'as'   => 'show_form',
+    'uses' => 'Controller@showForm',
 ]);
+

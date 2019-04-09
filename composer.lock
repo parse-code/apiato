@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cf50bc9beb8e229e43c1ed7527a37d5",
+    "content-hash": "ba30aad86fe4c0160b14e0f7066314c8",
     "packages": [
         {
             "name": "apiato/containers-installer",
@@ -12,7 +12,8 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/apiato/containers-installer",
-                "reference": "1410b5f705c4eaf03ff44917821b81cd97913543"
+                "reference": "1410b5f705c4eaf03ff44917821b81cd97913543",
+                "shasum": null
             },
             "require": {
                 "composer-plugin-api": "^1.0"
@@ -33,7 +34,8 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/apiato/core",
-                "reference": "b9da2684953ce9ce791f9f2a7990be750b349a15"
+                "reference": "b9da2684953ce9ce791f9f2a7990be750b349a15",
+                "shasum": null
             },
             "require": {
                 "apiato/containers-installer": "dev-master",
@@ -1707,6 +1709,75 @@
             "time": "2018-03-12T16:30:09+00:00"
         },
         {
+            "name": "hyn/multi-tenant",
+            "version": "5.0.0-beta.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hyn/multi-tenant.git",
+                "reference": "f639d8628f7fc87c3e727de042251186dbadeebc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hyn/multi-tenant/zipball/f639d8628f7fc87c3e727de042251186dbadeebc",
+                "reference": "f639d8628f7fc87c3e727de042251186dbadeebc",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "doctrine/dbal": "~2.5",
+                "php": ">=7.1.0",
+                "phpseclib/phpseclib": "~2.0",
+                "ramsey/uuid": "^3.5"
+            },
+            "require-dev": {
+                "laravel/framework": "dev-master as 5.4.0",
+                "laravel/laravel": "dev-master as 5.5.0",
+                "mockery/mockery": "^0.9.9",
+                "phpunit/phpunit": "^6.1",
+                "symfony/dom-crawler": "~3.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Hyn\\Tenancy\\Providers\\TenancyProvider",
+                        "Hyn\\Tenancy\\Providers\\WebserverProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Hyn\\Tenancy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel+hyn@klabbers.email",
+                    "homepage": "https://luceos.com"
+                }
+            ],
+            "description": "Run multiple websites using the same laravel installation while keeping tenant specific data separated for fully independant multi-domain setups.",
+            "keywords": [
+                "hyn",
+                "laravel",
+                "multi-tenancy",
+                "multi-tenant",
+                "saas",
+                "tenancy"
+            ],
+            "time": "2017-08-02T07:43:02+00:00"
+        },
+        {
             "name": "jakub-onderka/php-console-color",
             "version": "v0.2",
             "source": {
@@ -1808,16 +1879,16 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.79",
+            "version": "v1.2.80",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "e6ce66e9c892c42898cf84a35ecbfec5b4ab481c"
+                "reference": "af6a36e6d69670df3f0a3ed8e21d4b8cc67a7847"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/e6ce66e9c892c42898cf84a35ecbfec5b4ab481c",
-                "reference": "e6ce66e9c892c42898cf84a35ecbfec5b4ab481c",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/af6a36e6d69670df3f0a3ed8e21d4b8cc67a7847",
+                "reference": "af6a36e6d69670df3f0a3ed8e21d4b8cc67a7847",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -1859,7 +1930,7 @@
                 "crawlerdetect",
                 "php crawler detect"
             ],
-            "time": "2019-03-04T19:10:41+00:00"
+            "time": "2019-04-05T19:52:02+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -1938,16 +2009,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.9",
+            "version": "v5.8.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2455d21938e9072e5a8ecef64ae162a1825d336b"
+                "reference": "505325b4577968750e622d7a5a271cf8785a7a1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2455d21938e9072e5a8ecef64ae162a1825d336b",
-                "reference": "2455d21938e9072e5a8ecef64ae162a1825d336b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/505325b4577968750e622d7a5a271cf8785a7a1a",
+                "reference": "505325b4577968750e622d7a5a271cf8785a7a1a",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2087,7 +2158,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-04-02T14:11:17+00:00"
+            "time": "2019-04-04T13:39:49+00:00"
         },
         {
             "name": "laravel/passport",
@@ -2808,16 +2879,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.16.2",
+            "version": "2.16.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "720a9c36927396efeeb48a972e9d129d44b6dc28"
+                "reference": "373d9f0d58651af366435148c39beb702c2b7ef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/720a9c36927396efeeb48a972e9d129d44b6dc28",
-                "reference": "720a9c36927396efeeb48a972e9d129d44b6dc28",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/373d9f0d58651af366435148c39beb702c2b7ef4",
+                "reference": "373d9f0d58651af366435148c39beb702c2b7ef4",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -2870,7 +2941,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-03-29T12:23:12+00:00"
+            "time": "2019-04-06T17:09:23+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3303,6 +3374,62 @@
                 "dependency injection"
             ],
             "time": "2018-01-21T07:42:36+00:00"
+        },
+        {
+            "name": "predis/predis",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2016-06-16T16:22:20+00:00"
         },
         {
             "name": "prettus/l5-repository",
@@ -3968,16 +4095,16 @@
         },
         {
             "name": "spatie/laravel-fractal",
-            "version": "5.5.1",
+            "version": "5.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-fractal.git",
-                "reference": "d5061c2463379aeda7c83cb3960981b519eb9e3c"
+                "reference": "8ff6e6658806ca5778e3ceaa0e54ccc4c3566ce3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/d5061c2463379aeda7c83cb3960981b519eb9e3c",
-                "reference": "d5061c2463379aeda7c83cb3960981b519eb9e3c",
+                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/8ff6e6658806ca5778e3ceaa0e54ccc4c3566ce3",
+                "reference": "8ff6e6658806ca5778e3ceaa0e54ccc4c3566ce3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -3987,15 +4114,14 @@
                 ]
             },
             "require": {
-                "illuminate/contracts": "~5.7.0|~5.8.0",
-                "illuminate/support": "~5.7.0|~5.8.0",
-                "php": "^7.2",
+                "illuminate/contracts": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "php": "^7.1",
                 "spatie/fractalistic": "^2.5"
             },
             "require-dev": {
-                "dms/phpunit-arraysubset-asserts": "^0.1.0",
-                "orchestra/testbench": "~3.7.0|~3.8.0",
-                "phpunit/phpunit": "^8.0"
+                "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0|~3.8.0",
+                "phpunit/phpunit": "^6.2|^7.0"
             },
             "type": "library",
             "extra": {
@@ -4039,7 +4165,7 @@
                 "spatie",
                 "transform"
             ],
-            "time": "2019-03-13T14:18:31+00:00"
+            "time": "2019-02-27T00:32:04+00:00"
         },
         {
             "name": "spatie/laravel-permission",
@@ -8303,16 +8429,16 @@
         },
         {
             "name": "theseer/tokenizer",
-            "version": "1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/tokenizer.git",
-                "reference": "cb2f008f3f05af2893a87208fe6a6c4985483f8b"
+                "reference": "1c42705be2b6c1de5904f8afacef5895cab44bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/cb2f008f3f05af2893a87208fe6a6c4985483f8b",
-                "reference": "cb2f008f3f05af2893a87208fe6a6c4985483f8b",
+                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/1c42705be2b6c1de5904f8afacef5895cab44bf8",
+                "reference": "1c42705be2b6c1de5904f8afacef5895cab44bf8",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -8345,7 +8471,7 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2017-04-07T12:08:54+00:00"
+            "time": "2019-04-04T09:56:43+00:00"
         },
         {
             "name": "webmozart/assert",

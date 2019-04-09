@@ -30,6 +30,7 @@ class CreatePermissionTables extends Migration
             $table->string('guard_name');
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
+            $table->unsignedInteger('level')->default(0);
             $table->timestamps();
         });
 

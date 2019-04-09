@@ -1,0 +1,7 @@
+{
+  "name": "shoptima/tenancy",
+  "description": "Tenancy Container",
+  "require": {
+    "hyn/multi-tenant": "*"
+  }
+}

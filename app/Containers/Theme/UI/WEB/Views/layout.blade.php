@@ -5,6 +5,7 @@
     <title>{{ $title ?? config('app.name') }}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <link rel="stylesheet" href="/assets/css/site.min.css">
+    @stack('styles')
 </head>
 <body class="layout-row">
 <div id="aside" class="page-sidenav no-shrink bg-light nav-dropdown fade" aria-hidden="true">
@@ -23,7 +24,7 @@
             <div class="nav-active-text-primary" data-nav>
                 <ul class="nav">
                     @include('theme::inc.menu', ['link' => url('/'), 'label' => 'Dashboard', 'icon' => 'settings', 'color' => 'primary' ])
-                    @include('theme::inc.menu', ['link' => url('calendar'), 'label' => 'Calendar', 'icon' => 'upload', 'color' => 'success' ])
+                    @include('theme::inc.menu', ['link' => url('form'), 'label' => 'Form', 'icon' => 'monitor', 'color' => 'success' ])
                 </ul>
             </div>
         </div>
@@ -69,7 +70,6 @@
         </div>
     </div>
 </div>
-<script src="/assets/js/site.min.js"></script>
 @stack('scripts')
 </body>
 </html>

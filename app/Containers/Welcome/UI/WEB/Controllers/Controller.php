@@ -26,4 +26,9 @@ class Controller extends WebController
         // No actions to call. Since there's nothing to do but returning a response.
         return view('welcome::calendar');
     }
+
+    public function showForm()
+    {
+        return view('welcome::form');
+    }
 }
